@@ -1,0 +1,671 @@
+---
+title: "Symbiodiniaceae ITS2 analysis of coral juveniles produced from selective breeding (AGF)- Seasim lab experiments"
+output: html_document
+---
+
+
+# This pipeline processes ITS2 sequencing data to analyse the Symbiodiniaceae community composition in corals. 
+#The full original pipeline used is available on: #https://github.com/LaserKate/MontiSymTransgen/blob/master/DADA2analysis_DESeq.R 
+
+#and published: 
+#Transgenerational inheritance of shuffled symbiont communities in the coral Montipora digitata
+#Kate M. Quigley, Bette L. Willis & Carly D. Kenkel 
+#Scientific Reports volume 9, Article number: 13328 (2019) 
+#https://www.nature.com/articles/s41598-019-50045-y
+
+#Kat Damjanovic also added some nice front-end bit to help clean-up sequences and prep reads for processing and added the Venn diagram code
+
+# Before starting R analysis, the following commands run in the Terminal:
+
+# 1) Unzipping the files, type:
+# gunzip *.gz
+
+# 2) "Some pre-trimming. Retain only PE reads that match amplicon primer".
+#    "Remove reads containing Illumina sequencing adapters":
+
+# ls *R1_001.fastq | cut -d '_' -f 1 > samples.list
+
+# for file in $(cat samples.list); do  mv ${file}_*R1*.fastq ${file}_R1.fastq; mv ${file}_*R2*.fastq ${file}_R2.fastq; done 
+
+#for file in $(cat samples.list); do bbduk.sh in1=${file}_R1.fastq in2=${file}_R2.fastq ref=adaptors.fasta k=12 out1=${file}_R1_NoIll.fastq out2=${file}_R2_NoIll.fastq ; done &>bbduk_NoIll.log
+
+#for file in $(cat samples.list); do bbduk.sh in1=${file}_R1_NoIll.fastq in2=${file}_R2_NoIll.fastq restrictleft=21 k=10 literal=GTGAATTGCAGAACTCCGTG,CCTCCGCTTACTTATATGCTT outm1=${file}_R1_NoIll_NoITS.fastq outu1=${file}_R1_check.fastq outm2=${file}_R2_NoIll_NoITS.fastq outu2=${file}_R2_check.fastq; done &>bbduk_NoITS.log
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Call libraries
+
+```{r calling libraries}
+library(dada2); packageVersion("dada2"); citation("dada2")
+library(ShortRead); packageVersion("ShortRead")
+library(ggplot2); packageVersion("ggplot2")
+library(phyloseq); packageVersion("phyloseq")
+library(dplyr)
+library(vegan)
+
+setwd("")
+
+```
+
+
+# ################################## Start of DADA analysis ##################################
+
+```{r defining paths, echo=FALSE}
+
+# Set path to trimmed, renamed fastq files
+# Folder where unzipped, trimmed and renamed data are stored:
+
+path <- "ITS2_test_data"
+fns <- list.files(path)
+fns
+
+```
+
+
+##### Trimming/Filtering #######
+
+```{r sorting reads, echo=FALSE}
+
+fastqs <- fns[grepl(".fastq$", fns)]
+fastqs <- sort(fastqs) # Sort ensures forward/reverse reads are in same order
+fnFs <- fastqs[grepl("_R1", fastqs)] # Just the forward read files
+fnRs <- fastqs[grepl("_R2", fastqs)] # Just the reverse read files
+
+```
+
+
+##### Get sample names, assuming files named as so: SAMPLENAME_XXX.fastq; OTHERWISE MODIFY #######
+
+```{r specifying paths, echo=FALSE}
+
+sample.names <- sapply(strsplit(fnFs, "_"), `[`, 1) #the last number will select the field for renaming
+# Specify the full path to the fnFs and fnRs
+fnFs <- file.path(path, fnFs)
+fnRs <- file.path(path, fnRs)
+
+```
+
+#### Visualize Raw data #######
+
+```{r quality plots, echo=FALSE}
+
+#First, lets look at quality profile of R1 reads
+ 
+plotQualityProfile(fnFs[c(1,2,3,4)]) 
+plotQualityProfile(fnFs[c(88,89,90,91)])
+
+# The quality for forward reads drops at about 280 bp
+
+#Then look at quality profile of R2 reads
+
+quartz()
+plotQualityProfile(fnRs[c(1,2,3,4)])
+plotQualityProfile(fnRs[c(88,89,90,91)])
+
+# The quality for forward reads drops at about 260 bp (quality worse than forward reads, as per usual)
+
+# "DADA2 incorporates quality information into its error model which makes the algorithm more robust,
+# but trimming as the average qualities crash is still a good idea as long as our reads will still overlap. 
+# For Pochon ITS2 primers, have 160 bp overlap. Can trim quite a bit"
+
+
+# "The distribution of quality scores at each position is shown as a grey-scale heat map,
+# with dark colors corresponding to higher frequency. Green is the mean, orange is the median,
+# and the dashed orange lines are the 25th and 75th quantiles.
+# Recommend trimming where quality profile crashes - in this case, forward reads mostly fine up to 270-280;
+# for reverse >220-230 bases it gets below 30; this leaves enough overlap"
+
+# "If using this workflow on your own data: Your reads must still overlap after truncation in order to merge
+# them later! If you are using a less-overlapping primer set, your truncLen must be large enough to maintain
+# 20 + biological.length.variation nucleotides of overlap between them.
+# BUT: For common ITS amplicon strategies, it is undesirable to truncate reads to a fixed length due to
+# the large amount of length variation at that locus. That is OK, just leave out truncLen.
+# Make sure you removed the forward and reverse primers from both the forward and reverse reads though! 
+# Not too many indels in ITS2; at least not super long ones"
+
+```
+
+
+#### Filtering ####
+
+```{r filtering, echo=FALSE}
+# Make directory and filenames for the filtered fastqs
+
+filt_path <- file.path(path, "trimmedSubTest")
+if(!file_test("-d", filt_path)) dir.create(filt_path)
+filtFs <- file.path(filt_path, paste0(sample.names, "_F_filt.fastq.gz"))
+filtRs <- file.path(filt_path, paste0(sample.names, "_R_filt.fastq.gz"))
+
+
+# Filter
+
+# DADA does not allow Ns
+# Allow 1 expected errors, where EE = sum(10^(-Q/10)); more conservative, model converges
+# N nucleotides to remove from the start of each read: ITS2 primers = F 20bp; R 21bp
+# remove reads matching phiX genome
+# enforce matching between id-line sequence identifiers of F and R reads
+# On Windows set multithread=FALSE
+
+out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(270,220),
+              maxN=0, 
+              maxEE=c(1,1), 
+              truncQ=2, 
+              trimLeft=c(20,21),  
+              rm.phix=TRUE, 
+              matchIDs=TRUE, 
+              compress=TRUE, multithread=TRUE) 
+
+# Warning message: Some input samples had no reads pass the filter
+
+head(out) 
+tail(out)
+
+```
+
+
+#### Learn Error Rates #######
+
+```{r error rates, echo=FALSE}
+
+# "DADA2 learns its error model from the data itself by alternating estimation of the error rates and
+# the composition of the sample until they converge on a jointly consistent solution
+# (this is similar to the E-M algorithm)
+# As in many optimization problems, the algorithm must begin with an initial guess, for which the maximum
+# possible error rates in this data are used (the error rates if only the most abundant sequence
+# is correct and all the rest are errors)."
+
+setDadaOpt(MAX_CONSIST=30) #increase number of cycles to allow convergence
+errF <- learnErrors(filtFs, multithread=TRUE)
+
+errR <- learnErrors(filtRs, multithread=TRUE)
+
+
+# "sanity check: visualize estimated error rates
+# error rates should decline with increasing qual score
+# red line is based on definition of quality score alone
+# black line is estimated error rate after convergence
+# dots are observed error rate for each quality score"
+
+plotErrors(errF, nominalQ=TRUE) 
+plotErrors(errR, nominalQ=TRUE) 
+
+# See comments on github link! Much more information is provided there.
+
+```
+
+##### Dereplicate reads #######
+
+```{r dereplicate reads, echo=FALSE}
+
+# "Dereplication combines all identical sequencing reads into into “unique sequences” with a corresponding
+# “abundance”: the number of reads with that unique sequence. 
+# Dereplication substantially reduces computation time by eliminating redundant comparisons.
+# DADA2 retains a summary of the quality information associated with each unique sequence. The consensus quality
+# profile of a unique sequence is the average of the positional qualities from the dereplicated reads.
+# These quality profiles inform the error model of the subsequent denoising step,
+# significantly increasing DADA2’s accuracy."
+
+# Some samples were discarded during the trimming and filtering, so we should only select the existing ones:
+
+exists <- file.exists(filtFs)
+derepFs <- derepFastq(filtFs[exists], verbose=TRUE)
+derepRs <- derepFastq(filtRs[exists], verbose=TRUE)
+
+names(derepFs) <- sample.names[exists]
+names(derepRs) <- sample.names[exists]
+
+
+```
+
+##### Infer Sequence Variants #######
+
+```{r infere sequence variants, echo=FALSE}
+
+# "Must change some of the DADA options b/c original program optomized for ribosomal data,
+# not ITS - from github, "We currently recommend BAND_SIZE=32 for ITS data." leave as default for 16S/18S""
+
+setDadaOpt(BAND_SIZE=32)
+
+dadaFs <- dada(derepFs, err=errF, multithread=TRUE)
+dadaRs <- dada(derepRs, err=errR, multithread=TRUE)
+
+# "now, look at the dada class objects by sample
+# will tell how many 'real' variants in unique input seqs
+# By default, the dada function processes each sample independently, but pooled processing is available
+# with pool=TRUE and that may give better results for low sampling depths at the cost of increased
+# computation time. See our discussion about pooling samples for sample inference." 
+
+dadaFs[[88]]
+dadaRs[[88]]
+
+
+```
+
+
+##### Merge paired reads #######
+
+```{r merge paired end reads, echo=FALSE}
+
+# "To further cull spurious sequence variants
+# Merge the denoised forward and reverse reads
+# Paired reads that do not exactly overlap are removed"
+
+mergers <- mergePairs(dadaFs, derepFs, dadaRs, derepRs, verbose=TRUE)
+
+# Inspect the merger data.frame from the first sample
+head(mergers[[88]])
+
+summary((mergers[[88]]))
+
+# "We now have a data.frame for each sample with the merged $sequence, its $abundance,
+# and the indices of the merged $forward and $reverse denoised sequences. Paired reads that did not
+# exactly overlap were removed by mergePairs.
+
+
+```
+
+
+##### Construct sequence table #######
+
+```{r construct sequence table, echo=FALSE}
+
+# "A higher-resolution version of the “OTU table” produced by classical methods
+
+seqtab <- makeSequenceTable(mergers)
+dim(seqtab) # 88 x 3042
+
+# Inspect distribution of sequence lengths
+table(nchar(getSequences(seqtab)))
+
+plot(table(nchar(getSequences(seqtab)))) #real variants appear to be right in that 294-304 window
+
+# "The sequence table is a matrix with rows corresponding to (and named by) the samples, and 
+# columns corresponding to (and named by) the sequence variants. 
+# Do merged sequences all fall in the expected range for amplicons? ITS2 Pochon ~340bp-41bp primers;
+# accept 294-304
+# Sequences that are much longer or shorter than expected may be the result of non-specific priming,
+# and may be worth removing
+
+seqtab2 <- seqtab[,nchar(colnames(seqtab)) %in% seq(294,304)] #again, being fairly conservative wrt length
+
+table(nchar(getSequences(seqtab2)))
+dim(seqtab2) # 88 x 1294
+
+
+```
+
+
+##### Remove chimeras #######
+
+```{r remove chimeras, echo = FALSE}
+
+# "The core dada method removes substitution and indel errors, but chimeras remain. 
+# Fortunately, the accuracy of the sequences after denoising makes identifying chimeras easier 
+# than it is when dealing with fuzzy OTUs: all sequences which can be exactly reconstructed as 
+# a bimera (two-parent chimera) from more abundant sequences".
+
+seqtab.nochim <- removeBimeraDenovo(seqtab2, method="consensus", multithread=TRUE, verbose=TRUE)
+dim(seqtab.nochim) # 88 x 618: Identified 676 bimeras out of 1294 input sequences.
+
+sum(seqtab.nochim)/sum(seqtab2) # 0.9837317
+
+# "The fraction of chimeras varies based on factors including experimental procedures and sample complexity, 
+# but can be substantial.
+# BUT those variants account for only a minority of the total sequence reads
+# Most of your reads should remain after chimera removal (it is not uncommon for a majority of sequence
+# variants to be removed though)"
+
+```
+
+##### Track Read Stats #######
+
+```{r track read stats, echo = FALSE}
+
+getN <- function(x) sum(getUniques(x))
+track <- cbind(out, sapply(dadaFs, getN), sapply(mergers, getN), rowSums(seqtab2), rowSums(seqtab.nochim))
+colnames(track) <- c("input", "filtered", "denoised", "merged", "tabled", "nonchim")
+rownames(track) <- sample.names
+head(track)
+tail(track)
+
+write.csv(track,file="ReadFilterStats_SubsampledData.csv",row.names=TRUE,quote=FALSE)
+
+```
+
+
+##### Assign Taxonomy #######
+
+```{r assign taxonomy, echo = FALSE}
+
+# "It is common at this point, especially in 16S/18S/ITS amplicon sequencing, to classify
+# sequence variants taxonomically. 
+# DADA2 provides a native implementation of the RDP's naive Bayesian classifier. The assignTaxonomy function 
+# takes a set of sequences and a training set of taxonomically classified sequences, and outputs the
+# taxonomic assignments with at least minBoot bootstrap confidence.
+# Quigley et al. 2019 use a modified version of the GeoSymbio ITS2 database (Franklin et al. 2012), but this is now uncurated.
+
+#We have used the Arif 2014 database with modified synthax to suit assignTaxonomy
+#Arif database also available on Github
+
+taxa <- assignTaxonomy(seqtab.nochim, "arif_ITS2_DB_mod.fasta", minBoot=5,multithread=TRUE,tryRC=TRUE,outputBootstraps=FALSE)
+unname(head(taxa, 30))
+unname(taxa)
+
+# "Lowered bootstrap threshold from 50 to 5. Was not returning hits for many sequences. But reducing to 5
+# improved sequence return and identities largely match separate blastn search against the same database"
+
+# Now, save outputs so can come back to the analysis stage at a later point if desired
+#saveRDS(seqtab.nochim, file="SubSam_seqtab_nochim.rds")
+#saveRDS(taxa, file="SubSam_taxa_blastCorrected.rds")
+
+```
+
+
+# ################################## ##### handoff 2 phyloseq ####### ##################################
+
+```{r import data and contruct phyloseq object}
+##These are the original RDS files. They are listed here as a record but given they have data from other projects within them, I am not uploading 
+
+#However, the subsetted samples for only this current AGF18 project is saved below and available: 
+#psAGF
+#saveRDS(psAGF, file="psAGF.rds")
+
+
+# If you need to read in saved datafiles
+#seqtab.nochim2 <- readRDS("SubSam_seqtab_nochim.rds") #has data from other projects in it.
+
+#taxa2 <- readRDS("SubSam_taxa_blastCorrected.rds")
+#taxa2 <- readRDS("SubSam_taxa_blastCorrected.rds") #has data from other projects in it.
+#colnames(taxa2) <- "Species"
+
+#import dataframe holding sample information
+samdf<-read.csv("Juveniles_AGF18_Phyloseq_Metadata.csv")
+head(samdf)
+rownames(samdf) <- samdf$Samplename
+
+# Construct phyloseq object...
+
+# Sample names do not match! I rewrite the rownames of the ASV/OTU table so that "_F_filt.fastq.gz"
+# is removed from the names of samples
+
+#rownames1 <- rownames(seqtab.nochim2)
+#rownames2 <- sub("_F.*", "", rownames1)
+#rownames(seqtab.nochim2) <- rownames2
+
+# Some samples are written as "1M1_1.1" in samdf but as "1M1-1-1" in seqtab.nochim2:
+
+#rownames3 <- rownames(samdf)
+#rownames4 <- chartr("._","--", rownames3)
+#samdf$Samplename <- chartr("._","--", rownames4 <- chartr("._","--", rownames3))
+#rownames(samdf) <- rownames4
+
+# Some samples present in samdf are absent from seqtab.nochim2... I delete those 
+#samdf2 <- samdf[order(row.names(samdf)), ] # alphabetical order according to row names so it matches table
+#samdf3 <- subset(samdf2, (rownames(samdf2) %in% rownames(seqtab.nochim2))) # keep only common samples
+
+# Three samples were discarded
+#discarded <- subset(samdf2, !(Samplename %in% rownames(samdf3)))
+#discarded # BkBkSST3H, CuBkD1T3H, SbBkD1T2A
+
+# Construct phyloseq object (straightforward from dada2 outputs)
+#ps <- phyloseq(otu_table(seqtab.nochim2, taxa_are_rows=FALSE), 
+#               sample_data(samdf), 
+#               tax_table(taxa2))
+#ps
+
+ITS2_AGF18_Ariftax_Edit<-read.csv("ITS2_AGF18_Ariftax_Edit.csv", row.names=1)
+ITS2_AGF18_Ariftax_Edit.m<-as.matrix(ITS2_AGF18_Ariftax_Edit)
+ITS2_AGF18_Ariftax_Edit.tax<-tax_table(ITS2_AGF18_Ariftax_Edit.m)
+
+#ps.newtax <- phyloseq(otu_table(seqtab.nochim2, taxa_are_rows=FALSE), 
+#               sample_data(samdf), 
+#               tax_table(ITS2_AGF18_Ariftax_Edit.tax))
+
+#should be 88 samples (AGF + Monti + Evo21)
+
+# Summary of read counts - some samples have only 0 or 1 read!
+#sample_sum_ps <- data.frame(sum = sample_sums(ps))
+#summary(sample_sum_ps)
+#samp0 = rownames(sample_sum_ps)[which(sample_sum_ps == '0')]
+#samp1 = rownames(sample_sum_ps)[which(sample_sum_ps == '1')]
+
+# Keep only AGFjuvs18 and Monti samples from metadata file. My Evo21 Amil as well as Monti samples in the same sequencing run
+psAGF
+psAGF <- subset_samples(ps.newtax, Project %in% c("AGFjuvs18"))
+
+saveRDS(psAGF, file="psAGF.rds")
+psAGF <-readRDS("psAGF.rds")
+
+# Remove those ASVs that were not observed in any of the current samples. I seqeunced multiple datasets, from some ASVs were unique to those datasets
+sum(taxa_sums(psAGF) == 0)
+psAGF0 <- psAGF
+psAGF <- prune_taxa(taxa_sums(psAGF) > 0, psAGF)
+psAGF
+
+#psAGF should have 59 samples. Originally 62 but deleted 3 (as shown above) due to quality
+```
+
+
+```{subset only sediment samples for barplot, echo = FALSE}
+
+Treat2 <- subset_samples(psAGF, Treatment2 == "Sediment")
+
+# Summary of read counts 
+sample_sum_ps <- data.frame(sum = sample_sums(Treat2))
+summary(sample_sum_ps)
+samp0 = rownames(sample_sum_ps)[which(sample_sum_ps == '0')]
+
+psAGF.nas.2 <- subset_samples(Treat2, !(rownames(sample_data(Treat2)) %in% samp0)) #should only be 30 seds
+psAGF.nas.3 <- prune_samples(sample_sums(psAGF.nas.2) > 1, psAGF.nas.2) #should only be 30 seds
+```
+
+
+#### Variance stabilisation with DESeq2 ############################
+```{transform sample counts variance stabilization, echo=F}
+
+library(DESeq2)
+# A few notes (from tutorials):
+
+# "As input, the DESeq2 package expects count data as obtained, e.g., from RNA-seq or another
+# high-throughput sequencing experiment, in the form of a matrix of integer values. The values
+# in the matrix should be un-normalized counts. The DESeq2 model internally corrects for library size,
+# so transformed or normalized values such as counts scaled by library size should not be used as input.
+
+# A DESeqDataSet object must have an associated design formula. The design formula expresses the variables 
+# which will be used in modeling. The formula should be a tilde (~) followed by the variables with plus 
+# signs between them (it will be coerced into an formula if it is not already). The design can be changed 
+# later, however then all differential analysis steps should be repeated, as the design formula is used to 
+# estimate the dispersions and to estimate the log2 fold changes of the model.
+
+# In order to benefit from the default settings of the package, you should put the variable of 
+# interest at the end of the formula and make sure the control level is the first level."
+
+# Next codes from https://github.com/joey711/phyloseq/issues/283
+
+# Note: the function estimateSizeFactors could not work due to zero counts for some samples. That
+# is why these samples were removed here from the dataset.
+
+deseq_expdes1<-phyloseq_to_deseq2(psAGF.nas.3, ~1) 
+##########or Variance stabialized transformation (VST) manually within phyloseq way described in the negative binomial tutorial:
+#http://www.bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-mixture-models.html also Deseq2 love et al. pdf
+#compare different geom functions. the phyloseq one results in negative values. use Michael love's from above
+#with Negative Binomial http://www.bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-mixture-models.html
+#2. geom function 2 from M.Love
+counts<-counts(deseq_expdes1) #deseq object
+#M.Love geomean solution
+#######################################~1 with geom method M. Love
+#option 1
+#geoMeans = apply(counts, 1, function(row) if (all(row == 0)) 0 else exp(mean(log(row[row != 0]))))
+#option 2
+gm_mean = function(x, na.rm=TRUE){exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))}
+#gm_mean = function(x, na.rm=TRUE){exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))}
+#phyloseq geomean solution above
+geoMeans = apply(counts(deseq_expdes1), 1, gm_mean) #counts function in deseq2 package
+diagdds = estimateSizeFactors(deseq_expdes1, geoMeans = geoMeans)
+#https://github.com/joey711/phyloseq/issues/445
+hys2_TAX_subset_adultlarv_diagdds2 = DESeq(diagdds, fitType="local")
+
+#######
+#Combine previous phyloseq object with taxonomy and metadata with the new variance normalized table of ASV counts
+diagvst_num.phylo<-merge_phyloseq(hys2_TAX_subset_adultlarv_diagdds2, psAGF.nas.3)
+########
+```
+
+```{Final barplot of variance normalized abundances on 100% scale, echo=F}
+prune_VarNorm = prune_taxa(taxa_sums(diagvst_num.phylo) > 1, diagvst_num.phylo) #393 taxa
+
+diagvst_num.phylo.percent = transform_sample_counts(diagvst_num.phylo, function(x){x / sum(x)})
+
+#Final barplot
+p = plot_bar(diagvst_num.phylo.percent, fill="Clade")+facet_grid(.~Temp, scales="free")
+p + scale_fill_manual(values=c("A"="#F6CCA0","B"="#BB8996", "C"="#616594", "D"="#0E0A0E", "F"= "#55C1E2", "I"= "white", "Unknown"= "grey"))
+#deleted sample names for clutter and renamed y-axis so more clear (Variance normalized abundances in SED (%))
+```
+
+#GLM DESeq2
+```{Generalized linear models and DESeq2 Benjamini-Hochberg multiple test corrections , echo=F}
+#http://www.bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-mixture-models.html
+#deseq2-conversion-and-call
+deseq_expdes4<-phyloseq_to_deseq2(psAGF.nas.3, ~Temp) #Treat2, ps.newtax, psAGF.nas.3
+gm_mean1 = function(x, na.rm=TRUE){
+  exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))
+}
+geoMeans2 = apply(counts(deseq_expdes4), 1, gm_mean1)
+diagdds5 = estimateSizeFactors(deseq_expdes4, geoMeans = geoMeans2)
+diagdds5 = DESeq(diagdds5, fitType="local")
+res = results(diagdds5)
+res = res[order(res$padj, na.last=NA), ]
+alpha = 0.05
+sigtab = res[(res$padj < alpha), ]
+sigtab = cbind(as(sigtab, "data.frame"), as(tax_table(psAGF.nas.3)[rownames(sigtab), ], "matrix"))
+head(sigtab)
+posigtab = sigtab[sigtab[, "log2FoldChange"] > 0, ]
+posigtab = posigtab[, c("baseMean", "log2FoldChange", "lfcSE", "padj", "Species2", "Clade")]
+theme_set(theme_bw())
+sigtabgen = subset(sigtab, !is.na(Clade))
+# Phylum order
+x = tapply(sigtabgen$log2FoldChange, sigtabgen$Species2, function(x) max(x))
+x = sort(x, TRUE)
+sigtabgen$Species2 = factor(as.character(sigtabgen$Species2), levels=names(x))
+sigtabgen$Species2 = factor(as.character(sigtabgen$Species2), levels=names(x))
+ggplot(sigtabgen, aes(y=Species2, x=log2FoldChange, color=Clade)) + 
+  geom_vline(xintercept = 0.0, color = "gray", size = 0.5) +
+  geom_point(size=6) + 
+  theme(axis.text.x = element_text(angle = -90, hjust = 0, vjust=0.5))
+
+```
+
+
+##Issues with sequencing of juveniles from SS and D1. Almost no reads
+
+
+# Venn diagram, highlighting specific shared / unique taxas
+```{r Venn for each group, error = FALSE, include = TRUE, echo = FALSE, fig.height= 12, fig.width= 12}
+
+library(VennDiagram)
+
+#using raw abundnaces with all zeros removed. Not variance normalized data
+
+# Categories to compare
+#psAGF<-ps.newtax #88 samples
+psAGF<-psAGF #59 samples, pruned AGF only
+Temp1 <- subset_samples(psAGF, Temp == "26C")
+Temp2 <- subset_samples(psAGF, Temp == "32C")
+
+Treat1 <- subset_samples(psAGF, Treatment2 == "C1")
+Treat2 <- subset_samples(psAGF, Treatment2 == "Sediment")
+Treat3 <- subset_samples(psAGF, Treatment2 == "D1")
+Treat4 <- subset_samples(psAGF, Treatment2 == "SS")
+
+# Within the groups we want to compare,
+# for each OTU, sum the total across all samples in the group:
+Temp1.sum <- data.frame(sum = taxa_sums(Temp1))
+Temp2.sum <- data.frame(sum = taxa_sums(Temp2))
+
+Treat1.sum <- data.frame(sum = taxa_sums(Treat1))
+Treat2.sum <- data.frame(sum = taxa_sums(Treat2))
+Treat3.sum <- data.frame(sum = taxa_sums(Treat3))
+Treat4.sum <- data.frame(sum = taxa_sums(Treat4))
+
+# Select taxa that occur more than zero times:
+Temp1.list <- row.names(Temp1.sum)[Temp1.sum$sum>0]
+Temp2.list <- row.names(Temp2.sum)[Temp2.sum$sum>0]
+
+Treat1.list <- row.names(Treat1.sum)[Treat1.sum$sum>0]
+Treat2.list <- row.names(Treat2.sum)[Treat2.sum$sum>0]
+Treat3.list <- row.names(Treat3.sum)[Treat3.sum$sum>0]
+Treat4.list <- row.names(Treat4.sum)[Treat4.sum$sum>0]
+
+# Generate a list to be used in the plotting function:
+candidatesTemp <- list("26 C" = Temp1.list, "32 C" = Temp2.list)
+ 
+candidatesTreat <- list("C1" = Treat1.list, "Sediment" = Treat2.list,
+                        "D1" = Treat3.list, "SS"= Treat4.list)
+
+# Plot             
+grid.draw(venn.diagram(x = candidatesTemp, filename = NULL, 
+                       fill = c("#00B9E6", "#9900CC"), alpha = 0.5))
+
+grid.draw(venn.diagram(x = candidatesTreat, filename = NULL, 
+                       fill = c("#55C1E2", "#F6CCA0", "#BB8996", "#616594"), alpha = 0.5))
+```
+
+```{reblast to NCBI to check these, ECHO =F}
+#Treat3.list 
+[1] "AACCAATGGCCCCCTGAACGCGCATTGCACTCTTGGGACTTCCTGAGAGTATGTTTGCTTCAGTGCTTATTTTACCTCCTTGCAAGGTTCTGTCGCAACCTTGTGCCCTGGCCAGCCACGGGTTAACTTGCCCATGGCTTGCTGAGTAGTGATCTTTTAGAGCAAGCTCTGGCACGCTGTTGTTTGAGGCAGCCTATATTGAGGCTATTTCAAATGACGTTGCTACAAGCTTGATGTGTCCTTCTGCGCCGTTGCGCATCCCATAGCATGAAGTCAAACAAGAGAACCCGCTGAATTT"      
+#D1
+
+[2] "AACCAATGGCCTCCTGAACGTGCGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAACTTGCCCCAACTTTGCAAGCAGGATGTGTTTCTGCCTTGCGTTCTTATGAGCTATTGCCCTCTGAGCCAATGGCTTGTTAATTGCTTGGTTCTTGCAAAATGCTTTGCGCGCTGTTATTCAAGTTTCTACCTTCGTGGTTTTACTTGAGTGACGCTGCTCATGCTTGCAACCGCTGGGATGCAGGTGCATGCCTCTAGCATGAAGTCAGACAAGTGAACCCGCTGAATTT"
+#Cladocopium sp. 2486705 isolate C12PyToKa
+
+[3] "AACCAATGGCCTCCTGAACGTGCGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAACTTGCCCCAACTTTGCAAGCAGGATGTGTTTCTGCCTTGCGTTCTTATGAGCTATTGCCCTCTGAGCCAATTGTTAATTGCTTGGTTCTTGCAAAATGCTTTGCGCGCTGTTATTCAAGTTTCTACCTTCGTGGTTTTACTTGAGTGACGCTGCGACGCTGCTCACGCTTGCAACCGCTGGGATGCAGGTGCATGCCTCTAGCATGAAGTCAGACAAGTGAACCCGCTGAATTT"
+#Symbiodinium sp. clade C isolate
+
+####
+#Treat1.list
+[1] "AACCAATGGCCCCCTGAACGCGCATTGCACTCTTGGGACTTCCTGAGAGTATGTTTGCTTCAGTGCTTATTTTACCTCCTTGCAAGGTTCTGTCGCAACCTTGTGCCCTGGCCAGCCATGGGTTAACTTGCCCATGGCTTGCTGAGTAGTGATCTTTTAGAGCAAGCTCTGGCACGCTGTTGTTTGAGGCAGCCTATATTGAGGCTATTTCAAATGACGTTGCTACAAGCTTGATGTGTCCTTCTGCGCCGTTGCGCATCCCATAGCATGAAGTCAAACAAGAGAACCCGCTGAATTT"     
+#Select seq MN891786.1	Durusdinium sp. isolate AC14
+
+[2] "AACCAATGGCCTCCTGAACGTGCGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAACTTGCCCCAACTTTGCAAGCAGGATGTGTTTCTGCCTTGCGTTCTTATGAGCTATTGCCCTCTGAGCCAATGGCTTGTTAATTGCTTGGTTCTTGCAAAATGCTTTGCGCGCTGTTATTCAGGTTTCTACCTTCGTGGTTTTACTTGAGTGACGCTGCTCATGCTTGCAACCGCTGGGATGCAGGTGCATGCCTCTAGCATGAAGTCAGACAAGTGAACCCGCTGAATTT"   
+#Select seq MN654288.1	Cladocopium sp. 2486705 isolate C30PyToKa
+
+[3] "AACCAATAGGGATTTGAACGCATTCTGCGCTTTCGGGATAACCCTGAAAGCATGCCTGCTTCAGTGTCTACTGATATTTTGCCGCTGACGACATGCTCGTCGGTGTGCGTGTTTGTGTGCCAAGGTGCCCTTCTGGCCCTCGGCACATGCAGTCGACAGGAGCCTCCCCCTCAACAGGCAAACACTCGAATCACTCAGGCTGATTTTTGCGATTGCTCTGCTGTGGGTGCGCTGCTCTTGGTGGTCGTGGAGTGCCTCTCCTCTTTCAAGACATGAAGTTAGGTCAGCAAACCCGCTGAATTT"
+#Select seq GU941553.1	Uncultured eukaryote clone N401T
+
+[4] "AACCAATGGCCTCCTGAACGTGCGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAACTTGCCCCAACTTTGCAAGCAGGATGTGTTTCTGCCTTGCGTTCTTATGAGCTATTGCCCTCTGAGCCAATGGCTTGTTAATTGCTTGGTTCTTGCAAAATGCTTTGCGCGCTGTTATTCAAGTTTCTACCTTCGTGGTTTTACTTGAGTGACGCTGCTCATGCTTGCAACCGCTGGGATGCAGGTGCATGCCTCTAGCATGAAGTCAGACAAGTGAACCCGCTGAATTT"   
+#Select seq MN654271.1	Cladocopium sp. 2486705 isolate C12PyToKa
+
+[5] "AACCAATGGCCTCCTGAACGTACGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAGCTTGCCCAATCTTGCGGATAGACTTTGTTTCTGTCTTGCGCCCCTGTGAGCCATTGAGCGTCTAGCCAATGGCTTATTGAATGATTCGGTCTTGCAAAAGCTTTGCGCGCTTCTATTCAAGATTCCACCTTGGAGTGGTAATGCTTGAGTGACGCTGCTCATGCTTGCAACTGCTGGGATGCTAACGCATGCCTCTAGCATGAAGTCAGACAAGCGAACCCGCTGAATTT"   
+#Select seq MK007305.1	Symbiodiniaceae sp. strain SCF 092.01
+
+[6] "AACCAATGGCCTCCTGAACGTACGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAGCTTGCCCAATCTTGCGGATAGACTTTGTTTCTGTCTTGCGCCCCTGTGAGCCATTGAGCGTCTAGTCAATGGCTTATTGAATGATTCGGTCTTGCAAAAGCTTTGCGCGCTTCTATTCAAGATTCCACCTTGGAGTGGTATTGCTTGAGTGACGCTGCTCATGCTTGCAACTGCTGGGATGCTAACGCATGCCTCTAGCATGAAGTCAGACAAGCGAACCCGCTGAATTT"   
+#Select seq MK007305.1	Symbiodiniaceae sp. strain SCF 092.01
+
+[7] "AACCAATGGCCTCCTGAACGTACGTTGCACTCTTGGGATTTCCTGAGAGTATGTCTGCTTCAGTGCTTAGCTTGCCCAATCTTGCGGATAGATTTTGTTTCTGTCTTGCGCCCCTGTGAGCCATTGAACATCTAGTCAATGGCTTATTGAATGATTTGGTCTTGCAAAAGCTTTGCGCGCTGCTATTCAAGATTCCACCTTAAAGTGGTATTGCTTGAGTGACGCTGCTCATGCTTGCAGCTGCTGGGATGCTAGCGCATGCCTCTAGCATGAAGTCAGACAAGCGAACCCGCTGAATTT"   
+#Select seq HF582847.1	Symbiodinium sp. 1363 genomic DNA containing 5.
+
+##SS
+#Treat4.list
+[1] "AGCCAATGGCCCCCTGAACGCGCATTGCACTCTTGGGACTTCCTGAGAGTATGTTTGCTTCAGTGCTTATTTTACCTCCTTGCAAGGTTCTGTCGCAACCTTGTGCCCTGGCCAGCCATGGGTTAACTTGCCCATGGCTTGCTGAGTAGTGATCTTTTAGAGCAAGCTCTGGCACGCTGTTGTTTGAGGCAGCCTATATTGAGGCTATTTCAAATGACGTTGCTACAAGCTTGATGTGTCCTTCTGCGCCGTTGCGCATCCCATAGCATGAAGTCAAACAAGAGAACCCGCTGAATTT"
+#Select seq MN891786.1	Durusdinium sp. isolate AC14
+
+ss <- subset_samples(psAGF, Treatment2 == "SS")
+plot_bar(ss2, fill="Clade")+facet_grid(.~Temp, scales="free")
+plot(sort(taxa_sums(ss), TRUE), type="h", ylim=c(0, 50))
+#as.data.frame(taxa_sums(ss))
+
+D1 <- subset_samples(psAGF, Treatment2 == "D1a")
+plot_bar(D1, fill="Clade")+facet_grid(.~Temp, scales="free")
+plot(sort(taxa_sums(D1), TRUE), type="h", ylim=c(0, 50))
+#as.data.frame(taxa_sums(D1))
+
+#sediments
+write.csv(Treat2.sum, "Treat2.sum.csv")
+Sed <- subset_samples(psAGF, Treatment2 == "Sediment")
+
+write.csv(Treat1.sum, "Treat1.sum.csv")
+C1 <- subset_samples(psAGF, Treatment2 == "C1")
+```
