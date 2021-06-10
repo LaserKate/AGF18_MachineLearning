@@ -1,0 +1,988 @@
+order,Date,Time,Cumulative.hrs,Timepoint,Treatment,Treatment,Boat,Parentage,Well,Alive,Perc_surv,Mom,Dad,Cone,NumParents,Parents,Avg.temp,Max.temp,Variab.temp,symb,bleaching.thresHughes,heat.rateMiddlebrook,lifestage,n.risk,n.event,n.censor,estimate,std.error,conf.high,conf.low,Zoox,Tank,TotalMom,TotalDad
+1,7.12.18,8:30,56,4,35.5C,Hot,2,BKxCU,wellA,6,30,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+2,7.12.18,8:30,56,4,35.5C,Hot,2,BKxCU,wellB,14,70,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+3,7.12.18,8:30,56,4,35.5C,Hot,2,BKxCU,wellC,14,70,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+4,7.12.18,8:30,56,4,35.5C,Hot,2,BKxCU,wellD,14,70,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+5,7.12.18,8:30,56,4,35.5C,Hot,2,BKxCU,wellE,11,55,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+6,7.12.18,8:30,56,4,35.5C,Hot,2,BKxCU,wellF,14,70,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+7,7.12.18,8:30,56,4,35.5C,Hot,10,BKxCU,wellA,10,50,Backnumbers,Curd,27,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+8,7.12.18,8:30,56,4,35.5C,Hot,10,BKxCU,wellB,18,90,Backnumbers,Curd,27,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+9,7.12.18,8:30,56,4,35.5C,Hot,10,BKxCU,wellC,19,95,Backnumbers,Curd,27,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+10,7.12.18,8:30,56,4,35.5C,Hot,10,BKxCU,wellD,12,60,Backnumbers,Curd,27,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+11,7.12.18,8:30,56,4,35.5C,Hot,10,BKxCU,wellE,18,90,Backnumbers,Curd,27,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+12,7.12.18,8:30,56,4,35.5C,Hot,10,BKxCU,wellF,12,60,Backnumbers,Curd,27,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+13,7.12.18,8:30,56,4,35.5C,Hot,11,BKxDR,wellA,6,30,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+14,7.12.18,8:30,56,4,35.5C,Hot,11,BKxDR,wellB,15,75,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+15,7.12.18,8:30,56,4,35.5C,Hot,11,BKxDR,wellC,11,55,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+16,7.12.18,8:30,56,4,35.5C,Hot,11,BKxDR,wellD,10,50,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+17,7.12.18,8:30,56,4,35.5C,Hot,11,BKxDR,wellE,16,80,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+18,7.12.18,8:30,56,4,35.5C,Hot,11,BKxDR,wellF,9,45,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+19,7.12.18,8:30,56,4,35.5C,Hot,13,BKxBK,wellA,14,70,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+20,7.12.18,8:30,56,4,35.5C,Hot,13,BKxBK,wellB,17,85,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+21,7.12.18,8:30,56,4,35.5C,Hot,13,BKxBK,wellC,11,55,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+22,7.12.18,8:30,56,4,35.5C,Hot,13,BKxBK,wellD,17,85,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+23,7.12.18,8:30,56,4,35.5C,Hot,13,BKxBK,wellE,16,80,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+24,7.12.18,8:30,56,4,35.5C,Hot,13,BKxBK,wellF,9,45,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+25,7.12.18,8:30,56,4,35.5C,Hot,17,BKxLS,wellA,11,55,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+26,7.12.18,8:30,56,4,35.5C,Hot,17,BKxLS,wellB,16,80,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+27,7.12.18,8:30,56,4,35.5C,Hot,17,BKxLS,wellC,15,75,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+28,7.12.18,8:30,56,4,35.5C,Hot,17,BKxLS,wellD,18,90,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+29,7.12.18,8:30,56,4,35.5C,Hot,17,BKxLS,wellE,16,80,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+30,7.12.18,8:30,56,4,35.5C,Hot,17,BKxLS,wellF,17,85,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+31,7.12.18,8:30,56,4,35.5C,Hot,53,BKxLS,wellA,11,55,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+32,7.12.18,8:30,56,4,35.5C,Hot,53,BKxLS,wellB,8,40,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+33,7.12.18,8:30,56,4,35.5C,Hot,53,BKxLS,wellC,9,45,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+34,7.12.18,8:30,56,4,35.5C,Hot,53,BKxLS,wellD,11,55,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+35,7.12.18,8:30,56,4,35.5C,Hot,53,BKxLS,wellE,10,50,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+36,7.12.18,8:30,56,4,35.5C,Hot,53,BKxLS,wellF,11,55,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+37,7.12.18,8:30,56,4,35.5C,Hot,57,BKxSB,wellA,18,90,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+38,7.12.18,8:30,56,4,35.5C,Hot,57,BKxSB,wellB,16,80,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+39,7.12.18,8:30,56,4,35.5C,Hot,57,BKxSB,wellC,7,35,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+40,7.12.18,8:30,56,4,35.5C,Hot,57,BKxSB,wellD,10,50,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+41,7.12.18,8:30,56,4,35.5C,Hot,57,BKxSB,wellE,9,45,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+42,7.12.18,8:30,56,4,35.5C,Hot,57,BKxSB,wellF,4,20,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+43,7.12.18,8:30,56,4,35.5C,Hot,79,BKxCU,wellA,11,55,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+44,7.12.18,8:30,56,4,35.5C,Hot,79,BKxCU,wellB,13,65,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+45,7.12.18,8:30,56,4,35.5C,Hot,79,BKxCU,wellC,16,80,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+46,7.12.18,8:30,56,4,35.5C,Hot,79,BKxCU,wellD,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+47,7.12.18,8:30,56,4,35.5C,Hot,79,BKxCU,wellE,11,55,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+48,7.12.18,8:30,56,4,35.5C,Hot,79,BKxCU,wellF,16,80,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+49,7.12.18,8:30,56,4,35.5C,Hot,82,BKxSB,wellA,8,40,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+50,7.12.18,8:30,56,4,35.5C,Hot,82,BKxSB,wellB,10,50,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+51,7.12.18,8:30,56,4,35.5C,Hot,82,BKxSB,wellC,7,35,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+52,7.12.18,8:30,56,4,35.5C,Hot,82,BKxSB,wellD,11,55,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+53,7.12.18,8:30,56,4,35.5C,Hot,82,BKxSB,wellE,12,60,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+54,7.12.18,8:30,56,4,35.5C,Hot,82,BKxSB,wellF,14,70,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+55,7.12.18,8:30,56,4,35.5C,Hot,89,DRxSB,wellA,8,40,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+56,7.12.18,8:30,56,4,35.5C,Hot,89,DRxSB,wellB,18,90,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+57,7.12.18,8:30,56,4,35.5C,Hot,89,DRxSB,wellC,17,85,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+58,7.12.18,8:30,56,4,35.5C,Hot,89,DRxSB,wellD,12,60,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+59,7.12.18,8:30,56,4,35.5C,Hot,89,DRxSB,wellE,17,85,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+60,7.12.18,8:30,56,4,35.5C,Hot,89,DRxSB,wellF,15,75,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+61,7.12.18,8:30,56,4,35.5C,Hot,98,BKxSB,wellA,13,65,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+62,7.12.18,8:30,56,4,35.5C,Hot,98,BKxSB,wellB,14,70,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+63,7.12.18,8:30,56,4,35.5C,Hot,98,BKxSB,wellC,14,70,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+64,7.12.18,8:30,56,4,35.5C,Hot,98,BKxSB,wellD,15,75,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+65,7.12.18,8:30,56,4,35.5C,Hot,98,BKxSB,wellE,12,60,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+66,7.12.18,8:30,56,4,35.5C,Hot,98,BKxSB,wellF,6,30,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+67,7.12.18,8:30,56,4,35.5C,Hot,100,DRxDR,wellA,1,5,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+68,7.12.18,8:30,56,4,35.5C,Hot,100,DRxDR,wellB,5,25,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+69,7.12.18,8:30,56,4,35.5C,Hot,100,DRxDR,wellC,7,35,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+70,7.12.18,8:30,56,4,35.5C,Hot,100,DRxDR,wellD,4,20,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+71,7.12.18,8:30,56,4,35.5C,Hot,100,DRxDR,wellE,4,20,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+72,7.12.18,8:30,56,4,35.5C,Hot,100,DRxDR,wellF,6,30,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+73,7.12.18,8:30,56,4,35.5C,Hot,102,SBxCU,wellA,10,50,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+74,7.12.18,8:30,56,4,35.5C,Hot,102,SBxCU,wellB,13,65,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+75,7.12.18,8:30,56,4,35.5C,Hot,102,SBxCU,wellC,13,65,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+76,7.12.18,8:30,56,4,35.5C,Hot,102,SBxCU,wellD,9,45,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+77,7.12.18,8:30,56,4,35.5C,Hot,102,SBxCU,wellE,9,45,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+78,7.12.18,8:30,56,4,35.5C,Hot,102,SBxCU,wellF,16,80,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+79,7.12.18,8:30,56,4,35.5C,Hot,103,SBxBK,wellA,17,85,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+80,7.12.18,8:30,56,4,35.5C,Hot,103,SBxBK,wellB,18,90,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+81,7.12.18,8:30,56,4,35.5C,Hot,103,SBxBK,wellC,15,75,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+82,7.12.18,8:30,56,4,35.5C,Hot,103,SBxBK,wellD,15,75,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+83,7.12.18,8:30,56,4,35.5C,Hot,103,SBxBK,wellE,14,70,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+84,7.12.18,8:30,56,4,35.5C,Hot,103,SBxBK,wellF,19,95,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+85,7.12.18,8:30,56,4,35.5C,Hot,104,SBxLS,wellA,7,35,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+86,7.12.18,8:30,56,4,35.5C,Hot,104,SBxLS,wellB,13,65,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+87,7.12.18,8:30,56,4,35.5C,Hot,104,SBxLS,wellC,13,65,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+88,7.12.18,8:30,56,4,35.5C,Hot,104,SBxLS,wellD,NA,NA,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+89,7.12.18,8:30,56,4,35.5C,Hot,104,SBxLS,wellE,16,80,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+90,7.12.18,8:30,56,4,35.5C,Hot,104,SBxLS,wellF,12,60,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+91,7.12.18,8:30,56,4,35.5C,Hot,105,SBxSB,wellA,12,60,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+92,7.12.18,8:30,56,4,35.5C,Hot,105,SBxSB,wellB,8,40,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+93,7.12.18,8:30,56,4,35.5C,Hot,105,SBxSB,wellC,5,25,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+94,7.12.18,8:30,56,4,35.5C,Hot,105,SBxSB,wellD,7,35,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+95,7.12.18,8:30,56,4,35.5C,Hot,105,SBxSB,wellE,7,35,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+96,7.12.18,8:30,56,4,35.5C,Hot,105,SBxSB,wellF,1,5,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+97,7.12.18,8:30,56,4,35.5C,Hot,108,LSxCU,wellA,14,70,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+98,7.12.18,8:30,56,4,35.5C,Hot,108,LSxCU,wellB,10,50,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+99,7.12.18,8:30,56,4,35.5C,Hot,108,LSxCU,wellC,8,40,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+100,7.12.18,8:30,56,4,35.5C,Hot,108,LSxCU,wellD,12,60,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+101,7.12.18,8:30,56,4,35.5C,Hot,108,LSxCU,wellE,12,60,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+102,7.12.18,8:30,56,4,35.5C,Hot,108,LSxCU,wellF,15,75,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+103,7.12.18,8:30,56,4,35.5C,Hot,113,LSxDR,wellA,15,75,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+104,7.12.18,8:30,56,4,35.5C,Hot,113,LSxDR,wellB,11,55,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+105,7.12.18,8:30,56,4,35.5C,Hot,113,LSxDR,wellC,9,45,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+106,7.12.18,8:30,56,4,35.5C,Hot,113,LSxDR,wellD,14,70,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+107,7.12.18,8:30,56,4,35.5C,Hot,113,LSxDR,wellE,10,50,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+108,7.12.18,8:30,56,4,35.5C,Hot,113,LSxDR,wellF,14,70,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+109,7.12.18,8:30,56,4,35.5C,Hot,124,LSxLS,wellA,2,10,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+110,7.12.18,8:30,56,4,35.5C,Hot,124,LSxLS,wellB,4,20,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+111,7.12.18,8:30,56,4,35.5C,Hot,124,LSxLS,wellC,1,5,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+112,7.12.18,8:30,56,4,35.5C,Hot,124,LSxLS,wellD,1,5,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+113,7.12.18,8:30,56,4,35.5C,Hot,124,LSxLS,wellE,3,15,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+114,7.12.18,8:30,56,4,35.5C,Hot,124,LSxLS,wellF,0,0,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+115,7.12.18,8:30,56,4,35.5C,Hot,132,CUxSB,wellA,13,65,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+116,7.12.18,8:30,56,4,35.5C,Hot,132,CUxSB,wellB,15,75,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+117,7.12.18,8:30,56,4,35.5C,Hot,132,CUxSB,wellC,16,80,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+118,7.12.18,8:30,56,4,35.5C,Hot,132,CUxSB,wellD,18,90,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+119,7.12.18,8:30,56,4,35.5C,Hot,132,CUxSB,wellE,14,70,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+120,7.12.18,8:30,56,4,35.5C,Hot,132,CUxSB,wellF,19,95,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+121,7.12.18,8:30,56,4,35.5C,Hot,147,DRxLS,wellA,13,65,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+122,7.12.18,8:30,56,4,35.5C,Hot,147,DRxLS,wellB,17,85,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+123,7.12.18,8:30,56,4,35.5C,Hot,147,DRxLS,wellC,19,95,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+124,7.12.18,8:30,56,4,35.5C,Hot,147,DRxLS,wellD,0,0,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+125,7.12.18,8:30,56,4,35.5C,Hot,147,DRxLS,wellE,4,20,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+126,7.12.18,8:30,56,4,35.5C,Hot,147,DRxLS,wellF,5,25,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+127,7.12.18,8:30,56,4,35.5C,Hot,148,DRxSB,wellA,8,40,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+128,7.12.18,8:30,56,4,35.5C,Hot,148,DRxSB,wellB,10,50,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+129,7.12.18,8:30,56,4,35.5C,Hot,148,DRxSB,wellC,9,45,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+130,7.12.18,8:30,56,4,35.5C,Hot,148,DRxSB,wellD,8,40,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+131,7.12.18,8:30,56,4,35.5C,Hot,148,DRxSB,wellE,11,55,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+132,7.12.18,8:30,56,4,35.5C,Hot,148,DRxSB,wellF,12,60,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+133,7.12.18,8:30,56,4,35.5C,Hot,152,LSxCU,wellA,9,45,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+134,7.12.18,8:30,56,4,35.5C,Hot,152,LSxCU,wellB,7,35,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+135,7.12.18,8:30,56,4,35.5C,Hot,152,LSxCU,wellC,8,40,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+136,7.12.18,8:30,56,4,35.5C,Hot,152,LSxCU,wellD,8,40,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+137,7.12.18,8:30,56,4,35.5C,Hot,152,LSxCU,wellE,9,45,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+138,7.12.18,8:30,56,4,35.5C,Hot,152,LSxCU,wellF,3,15,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+139,7.12.18,8:30,56,4,35.5C,Hot,153,LSxBK,wellA,14,70,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+140,7.12.18,8:30,56,4,35.5C,Hot,153,LSxBK,wellB,13,65,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+141,7.12.18,8:30,56,4,35.5C,Hot,153,LSxBK,wellC,14,70,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+142,7.12.18,8:30,56,4,35.5C,Hot,153,LSxBK,wellD,11,55,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+143,7.12.18,8:30,56,4,35.5C,Hot,153,LSxBK,wellE,14,70,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+144,7.12.18,8:30,56,4,35.5C,Hot,153,LSxBK,wellF,13,65,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+145,7.12.18,8:30,56,4,35.5C,Hot,156,CUxLS,wellA,15,75,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+146,7.12.18,8:30,56,4,35.5C,Hot,156,CUxLS,wellB,12,60,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+147,7.12.18,8:30,56,4,35.5C,Hot,156,CUxLS,wellC,16,80,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+148,7.12.18,8:30,56,4,35.5C,Hot,156,CUxLS,wellD,16,80,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+149,7.12.18,8:30,56,4,35.5C,Hot,156,CUxLS,wellE,14,70,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+150,7.12.18,8:30,56,4,35.5C,Hot,156,CUxLS,wellF,18,90,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+151,7.12.18,8:30,56,4,35.5C,Hot,162,CUxBK,wellA,19,95,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+152,7.12.18,8:30,56,4,35.5C,Hot,162,CUxBK,wellB,14,70,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+153,7.12.18,8:30,56,4,35.5C,Hot,162,CUxBK,wellC,14,70,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+154,7.12.18,8:30,56,4,35.5C,Hot,162,CUxBK,wellD,17,85,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+155,7.12.18,8:30,56,4,35.5C,Hot,162,CUxBK,wellE,15,75,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+156,7.12.18,8:30,56,4,35.5C,Hot,162,CUxBK,wellF,20,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+157,7.12.18,8:30,56,4,35.5C,Hot,163,CUxBK,wellA,16,80,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+158,7.12.18,8:30,56,4,35.5C,Hot,163,CUxBK,wellB,10,50,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+159,7.12.18,8:30,56,4,35.5C,Hot,163,CUxBK,wellC,15,75,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+160,7.12.18,8:30,56,4,35.5C,Hot,163,CUxBK,wellD,21,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+161,7.12.18,8:30,56,4,35.5C,Hot,163,CUxBK,wellE,16,80,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+162,7.12.18,8:30,56,4,35.5C,Hot,163,CUxBK,wellF,19,95,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+163,7.12.18,8:30,56,4,35.5C,Hot,164,CUxDR,wellA,18,90,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+164,7.12.18,8:30,56,4,35.5C,Hot,164,CUxDR,wellB,15,75,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+165,7.12.18,8:30,56,4,35.5C,Hot,164,CUxDR,wellC,15,75,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+166,7.12.18,8:30,56,4,35.5C,Hot,164,CUxDR,wellD,13,65,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+167,7.12.18,8:30,56,4,35.5C,Hot,164,CUxDR,wellE,14,70,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+168,7.12.18,8:30,56,4,35.5C,Hot,164,CUxDR,wellF,12,60,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+169,7.12.18,8:30,56,4,35.5C,Hot,165,DRxCU,wellA,11,55,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+170,7.12.18,8:30,56,4,35.5C,Hot,165,DRxCU,wellB,15,75,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+171,7.12.18,8:30,56,4,35.5C,Hot,165,DRxCU,wellC,12,60,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+172,7.12.18,8:30,56,4,35.5C,Hot,165,DRxCU,wellD,15,75,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+173,7.12.18,8:30,56,4,35.5C,Hot,165,DRxCU,wellE,10,50,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+174,7.12.18,8:30,56,4,35.5C,Hot,165,DRxCU,wellF,14,70,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+175,7.12.18,8:30,56,4,35.5C,Hot,166,CUxCU,wellA,13,65,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+176,7.12.18,8:30,56,4,35.5C,Hot,166,CUxCU,wellB,16,80,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+177,7.12.18,8:30,56,4,35.5C,Hot,166,CUxCU,wellC,17,85,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+178,7.12.18,8:30,56,4,35.5C,Hot,166,CUxCU,wellD,15,75,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+179,7.12.18,8:30,56,4,35.5C,Hot,166,CUxCU,wellE,15,75,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+180,7.12.18,8:30,56,4,35.5C,Hot,166,CUxCU,wellF,15,75,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+181,7.12.18,8:30,56,4,35.5C,Hot,171,DRxBK,wellA,8,40,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+182,7.12.18,8:30,56,4,35.5C,Hot,171,DRxBK,wellB,13,65,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+183,7.12.18,8:30,56,4,35.5C,Hot,171,DRxBK,wellC,9,45,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+184,7.12.18,8:30,56,4,35.5C,Hot,171,DRxBK,wellD,7,35,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+185,7.12.18,8:30,56,4,35.5C,Hot,171,DRxBK,wellE,9,45,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+186,7.12.18,8:30,56,4,35.5C,Hot,171,DRxBK,wellF,15,75,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+187,7.12.18,8:30,56,4,35.5C,Hot,172,DRxBK,wellA,19,95,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+188,7.12.18,8:30,56,4,35.5C,Hot,172,DRxBK,wellB,13,65,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+189,7.12.18,8:30,56,4,35.5C,Hot,172,DRxBK,wellC,12,60,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+190,7.12.18,8:30,56,4,35.5C,Hot,172,DRxBK,wellD,13,65,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+191,7.12.18,8:30,56,4,35.5C,Hot,172,DRxBK,wellE,12,60,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+192,7.12.18,8:30,56,4,35.5C,Hot,172,DRxBK,wellF,15,75,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+193,7.12.18,8:30,56,4,35.5C,Hot,173,BKxCU,wellA,9,45,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+194,7.12.18,8:30,56,4,35.5C,Hot,173,BKxCU,wellB,12,60,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+195,7.12.18,8:30,56,4,35.5C,Hot,173,BKxCU,wellC,11,55,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+196,7.12.18,8:30,56,4,35.5C,Hot,173,BKxCU,wellD,18,90,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+197,7.12.18,8:30,56,4,35.5C,Hot,173,BKxCU,wellE,12,60,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+198,7.12.18,8:30,56,4,35.5C,Hot,173,BKxCU,wellF,12,60,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+199,7.12.18,8:30,56,4,35.5C,Hot,174,BKxLS,wellA,8,40,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+200,7.12.18,8:30,56,4,35.5C,Hot,174,BKxLS,wellB,7,35,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+201,7.12.18,8:30,56,4,35.5C,Hot,174,BKxLS,wellC,14,70,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+202,7.12.18,8:30,56,4,35.5C,Hot,174,BKxLS,wellD,13,65,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+203,7.12.18,8:30,56,4,35.5C,Hot,174,BKxLS,wellE,14,70,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+204,7.12.18,8:30,56,4,35.5C,Hot,174,BKxLS,wellF,14,70,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+205,7.12.18,8:30,56,4,35.5C,Hot,179,SBxDR,wellA,18,90,Sand Bank 7,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+206,7.12.18,8:30,56,4,35.5C,Hot,179,SBxDR,wellB,12,60,Sand Bank 7,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+207,7.12.18,8:30,56,4,35.5C,Hot,179,SBxDR,wellC,13,65,Sand Bank 7,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+208,7.12.18,8:30,56,4,35.5C,Hot,179,SBxDR,wellD,13,65,Sand Bank 7,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+209,7.12.18,8:30,56,4,35.5C,Hot,179,SBxDR,wellE,17,85,Sand Bank 7,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+210,7.12.18,8:30,56,4,35.5C,Hot,179,SBxDR,wellF,12,60,Sand Bank 7,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+211,7.12.18,8:30,56,4,35.5C,Hot,180,BKxSB,wellA,16,80,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+212,7.12.18,8:30,56,4,35.5C,Hot,180,BKxSB,wellB,16,80,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+213,7.12.18,8:30,56,4,35.5C,Hot,180,BKxSB,wellC,18,90,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+214,7.12.18,8:30,56,4,35.5C,Hot,180,BKxSB,wellD,13,65,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+215,7.12.18,8:30,56,4,35.5C,Hot,180,BKxSB,wellE,13,65,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+216,7.12.18,8:30,56,4,35.5C,Hot,180,BKxSB,wellF,12,60,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+217,7.12.18,8:30,56,4,35.5C,Hot,183,BKxDR,wellA,15,75,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+218,7.12.18,8:30,56,4,35.5C,Hot,183,BKxDR,wellB,5,25,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+219,7.12.18,8:30,56,4,35.5C,Hot,183,BKxDR,wellC,10,50,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+220,7.12.18,8:30,56,4,35.5C,Hot,183,BKxDR,wellD,9,45,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+221,7.12.18,8:30,56,4,35.5C,Hot,183,BKxDR,wellE,7,35,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+222,7.12.18,8:30,56,4,35.5C,Hot,183,BKxDR,wellF,15,75,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+223,7.12.18,8:30,56,4,35.5C,Hot,185,CUxDR,wellA,11,55,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+224,7.12.18,8:30,56,4,35.5C,Hot,185,CUxDR,wellB,16,80,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+225,7.12.18,8:30,56,4,35.5C,Hot,185,CUxDR,wellC,8,40,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+226,7.12.18,8:30,56,4,35.5C,Hot,185,CUxDR,wellD,10,50,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+227,7.12.18,8:30,56,4,35.5C,Hot,185,CUxDR,wellE,8,40,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+228,7.12.18,8:30,56,4,35.5C,Hot,185,CUxDR,wellF,11,55,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+229,7.12.18,8:30,56,4,27C,Ambient,9,BKxDR,wellA,20,100,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+230,7.12.18,8:30,56,4,27C,Ambient,16,BKxCU,wellA,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+231,7.12.18,8:30,56,4,27C,Ambient,32,CUxLS,wellA,20,100,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+232,7.12.18,8:30,56,4,27C,Ambient,43,BKxLS,wellA,21,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+233,7.12.18,8:30,56,4,27C,Ambient,46,BKxCU,wellA,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+234,7.12.18,8:30,56,4,27C,Ambient,52,DRxBK,wellA,18,90,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+235,7.12.18,8:30,56,4,27C,Ambient,55,BKxLS,wellA,18,90,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+236,7.12.18,8:30,56,4,27C,Ambient,58,BKxSB,wellA,21,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+237,7.12.18,8:30,56,4,27C,Ambient,61,BKxDR,wellA,20,100,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+238,7.12.18,8:30,56,4,27C,Ambient,66,BKxLS,wellA,17,85,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+239,7.12.18,8:30,56,4,27C,Ambient,72,DRxCU,wellA,20,100,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+240,7.12.18,8:30,56,4,27C,Ambient,75,BKxCU,wellA,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+241,7.12.18,8:30,56,4,27C,Ambient,81,BKxCU,wellA,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+242,7.12.18,8:30,56,4,27C,Ambient,86,BKxSB,wellA,19,95,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+243,7.12.18,8:30,56,4,27C,Ambient,99,CUxBK,wellA,17,85,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+244,7.12.18,8:30,56,4,27C,Ambient,106,SBxCU,wellA,20,100,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+245,7.12.18,8:30,56,4,27C,Ambient,109,LSxBK,wellA,19,95,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+246,7.12.18,8:30,56,4,27C,Ambient,112,LSxDR,wellA,20,100,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+247,7.12.18,8:30,56,4,27C,Ambient,116,SBxLS,wellA,20,100,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+248,7.12.18,8:30,56,4,27C,Ambient,131,BKxBK,wellA,20,100,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+249,7.12.18,8:30,56,4,27C,Ambient,144,CUxBK,wellA,19,95,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+250,7.12.18,8:30,56,4,27C,Ambient,150,LSxSB,wellA,20,100,Long Sandy,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+251,7.12.18,8:30,56,4,27C,Ambient,151,DRxLS,wellA,20,100,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+252,7.12.18,8:30,56,4,27C,Ambient,154,LSxCU,wellA,18,90,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+253,7.12.18,8:30,56,4,27C,Ambient,157,LSxCU,wellA,19,95,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+254,7.12.18,8:30,56,4,27C,Ambient,158,CUxSB,wellA,19,95,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+255,7.12.18,8:30,56,4,27C,Ambient,159,BKxSB,wellA,19,95,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+256,7.12.18,8:30,56,4,27C,Ambient,161,DRxSB,wellA,19,95,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+257,7.12.18,8:30,56,4,27C,Ambient,167,SBxSB,wellA,19,95,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+258,7.12.18,8:30,56,4,27C,Ambient,168,LSxLS,wellA,19,95,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+259,7.12.18,8:30,56,4,27C,Ambient,169,DRxBK,wellA,19,95,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+260,7.12.18,8:30,56,4,27C,Ambient,170,CUxDR,wellA,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+261,7.12.18,8:30,56,4,27C,Ambient,175,DRxDR,wellA,19,95,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+262,7.12.18,8:30,56,4,27C,Ambient,178,SBxBK,wellA,19,95,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+263,7.12.18,8:30,56,4,27C,Ambient,182,CUxDR,wellA,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+264,7.12.18,8:30,56,4,27C,Ambient,187,CUxCU,wellA,17,85,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+265,7.12.18,8:30,56,4,27C,Ambient,5,BKxSB,wellB,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+266,7.12.18,8:30,56,4,27C,Ambient,9,BKxDR,wellB,20,100,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+267,7.12.18,8:30,56,4,27C,Ambient,16,BKxCU,wellB,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+268,7.12.18,8:30,56,4,27C,Ambient,32,CUxLS,wellB,19,95,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+269,7.12.18,8:30,56,4,27C,Ambient,43,BKxLS,wellB,21,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+270,7.12.18,8:30,56,4,27C,Ambient,46,BKxCU,wellB,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+271,7.12.18,8:30,56,4,27C,Ambient,52,DRxBK,wellB,20,100,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+272,7.12.18,8:30,56,4,27C,Ambient,55,BKxLS,wellB,19,95,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+273,7.12.18,8:30,56,4,27C,Ambient,58,BKxSB,wellB,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+274,7.12.18,8:30,56,4,27C,Ambient,61,BKxDR,wellB,19,95,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+275,7.12.18,8:30,56,4,27C,Ambient,66,BKxLS,wellB,19,95,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+276,7.12.18,8:30,56,4,27C,Ambient,72,DRxCU,wellB,20,100,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+277,7.12.18,8:30,56,4,27C,Ambient,75,BKxCU,wellB,18,90,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+278,7.12.18,8:30,56,4,27C,Ambient,81,BKxCU,wellB,18,90,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+279,7.12.18,8:30,56,4,27C,Ambient,86,BKxSB,wellB,19,95,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+280,7.12.18,8:30,56,4,27C,Ambient,99,CUxBK,wellB,19,95,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+281,7.12.18,8:30,56,4,27C,Ambient,106,SBxCU,wellB,20,95,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+282,7.12.18,8:30,56,4,27C,Ambient,109,LSxBK,wellB,19,95,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+283,7.12.18,8:30,56,4,27C,Ambient,112,LSxDR,wellB,21,100,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+284,7.12.18,8:30,56,4,27C,Ambient,116,SBxLS,wellB,20,100,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+285,7.12.18,8:30,56,4,27C,Ambient,131,BKxBK,wellB,19,95,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+286,7.12.18,8:30,56,4,27C,Ambient,144,CUxBK,wellB,20,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+287,7.12.18,8:30,56,4,27C,Ambient,150,LSxSB,wellB,21,100,Long Sandy,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+288,7.12.18,8:30,56,4,27C,Ambient,151,DRxLS,wellB,19,95,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+289,7.12.18,8:30,56,4,27C,Ambient,154,LSxCU,wellB,18,90,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+290,7.12.18,8:30,56,4,27C,Ambient,157,LSxCU,wellB,20,100,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+291,7.12.18,8:30,56,4,27C,Ambient,158,CUxSB,wellB,20,100,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+292,7.12.18,8:30,56,4,27C,Ambient,159,BKxSB,wellB,19,95,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+293,7.12.18,8:30,56,4,27C,Ambient,161,DRxSB,wellB,18,90,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+294,7.12.18,8:30,56,4,27C,Ambient,167,SBxSB,wellB,19,95,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+295,7.12.18,8:30,56,4,27C,Ambient,168,LSxLS,wellB,20,100,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+296,7.12.18,8:30,56,4,27C,Ambient,169,DRxBK,wellB,18,90,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+297,7.12.18,8:30,56,4,27C,Ambient,170,CUxDR,wellB,19,95,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+298,7.12.18,8:30,56,4,27C,Ambient,175,DRxDR,wellB,20,100,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+299,7.12.18,8:30,56,4,27C,Ambient,178,SBxBK,wellB,20,90,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+300,7.12.18,8:30,56,4,27C,Ambient,182,CUxDR,wellB,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+301,7.12.18,8:30,56,4,27C,Ambient,187,CUxCU,wellB,19,95,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+302,7.12.18,8:30,56,4,27C,Ambient,5,BKxSB,wellC,18,90,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+303,7.12.18,8:30,56,4,27C,Ambient,9,BKxDR,wellC,19,95,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+304,7.12.18,8:30,56,4,27C,Ambient,16,BKxCU,wellC,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+305,7.12.18,8:30,56,4,27C,Ambient,32,CUxLS,wellC,21,100,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+306,7.12.18,8:30,56,4,27C,Ambient,43,BKxLS,wellC,19,95,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+307,7.12.18,8:30,56,4,27C,Ambient,46,BKxCU,wellC,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+308,7.12.18,8:30,56,4,27C,Ambient,52,DRxBK,wellC,20,100,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+309,7.12.18,8:30,56,4,27C,Ambient,55,BKxLS,wellC,16,80,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+310,7.12.18,8:30,56,4,27C,Ambient,58,BKxSB,wellC,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+311,7.12.18,8:30,56,4,27C,Ambient,61,BKxDR,wellC,18,90,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+312,7.12.18,8:30,56,4,27C,Ambient,66,BKxLS,wellC,17,85,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+313,7.12.18,8:30,56,4,27C,Ambient,72,DRxCU,wellC,18,90,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+314,7.12.18,8:30,56,4,27C,Ambient,75,BKxCU,wellC,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+315,7.12.18,8:30,56,4,27C,Ambient,81,BKxCU,wellC,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+316,7.12.18,8:30,56,4,27C,Ambient,86,BKxSB,wellC,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+317,7.12.18,8:30,56,4,27C,Ambient,99,CUxBK,wellC,21,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+318,7.12.18,8:30,56,4,27C,Ambient,106,SBxCU,wellC,20,95,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+319,7.12.18,8:30,56,4,27C,Ambient,109,LSxBK,wellC,15,75,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+320,7.12.18,8:30,56,4,27C,Ambient,112,LSxDR,wellC,19,95,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+321,7.12.18,8:30,56,4,27C,Ambient,116,SBxLS,wellC,20,100,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+322,7.12.18,8:30,56,4,27C,Ambient,131,BKxBK,wellC,15,75,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+323,7.12.18,8:30,56,4,27C,Ambient,144,CUxBK,wellC,20,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+324,7.12.18,8:30,56,4,27C,Ambient,150,LSxSB,wellC,20,100,Long Sandy,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+325,7.12.18,8:30,56,4,27C,Ambient,151,DRxLS,wellC,19,95,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+326,7.12.18,8:30,56,4,27C,Ambient,154,LSxCU,wellC,20,100,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+327,7.12.18,8:30,56,4,27C,Ambient,157,LSxCU,wellC,20,100,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+328,7.12.18,8:30,56,4,27C,Ambient,158,CUxSB,wellC,19,95,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+329,7.12.18,8:30,56,4,27C,Ambient,159,BKxSB,wellC,18,90,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+330,7.12.18,8:30,56,4,27C,Ambient,161,DRxSB,wellC,19,95,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+331,7.12.18,8:30,56,4,27C,Ambient,167,SBxSB,wellC,21,100,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+332,7.12.18,8:30,56,4,27C,Ambient,168,LSxLS,wellC,20,100,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+333,7.12.18,8:30,56,4,27C,Ambient,169,DRxBK,wellC,20,100,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+334,7.12.18,8:30,56,4,27C,Ambient,170,CUxDR,wellC,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+335,7.12.18,8:30,56,4,27C,Ambient,175,DRxDR,wellC,19,95,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+336,7.12.18,8:30,56,4,27C,Ambient,178,SBxBK,wellC,20,90,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+337,7.12.18,8:30,56,4,27C,Ambient,182,CUxDR,wellC,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+338,7.12.18,8:30,56,4,27C,Ambient,187,CUxCU,wellC,20,100,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+339,7.12.18,8:30,56,4,27C,Ambient,5,BKxSB,wellD,21,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+340,7.12.18,8:30,56,4,27C,Ambient,9,BKxDR,wellD,19,95,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+341,7.12.18,8:30,56,4,27C,Ambient,16,BKxCU,wellD,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+342,7.12.18,8:30,56,4,27C,Ambient,32,CUxLS,wellD,20,100,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+343,7.12.18,8:30,56,4,27C,Ambient,43,BKxLS,wellD,18,90,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+344,7.12.18,8:30,56,4,27C,Ambient,46,BKxCU,wellD,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+345,7.12.18,8:30,56,4,27C,Ambient,52,DRxBK,wellD,19,95,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+346,7.12.18,8:30,56,4,27C,Ambient,55,BKxLS,wellD,20,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+347,7.12.18,8:30,56,4,27C,Ambient,58,BKxSB,wellD,NA,NA,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+348,7.12.18,8:30,56,4,27C,Ambient,61,BKxDR,wellD,18,90,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+349,7.12.18,8:30,56,4,27C,Ambient,66,BKxLS,wellD,20,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+350,7.12.18,8:30,56,4,27C,Ambient,72,DRxCU,wellD,19,95,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+351,7.12.18,8:30,56,4,27C,Ambient,75,BKxCU,wellD,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+352,7.12.18,8:30,56,4,27C,Ambient,81,BKxCU,wellD,18,90,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+353,7.12.18,8:30,56,4,27C,Ambient,86,BKxSB,wellD,19,95,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+354,7.12.18,8:30,56,4,27C,Ambient,99,CUxBK,wellD,20,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+355,7.12.18,8:30,56,4,27C,Ambient,106,SBxCU,wellD,20,100,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+356,7.12.18,8:30,56,4,27C,Ambient,109,LSxBK,wellD,19,95,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+357,7.12.18,8:30,56,4,27C,Ambient,112,LSxDR,wellD,20,100,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+358,7.12.18,8:30,56,4,27C,Ambient,116,SBxLS,wellD,19,95,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+359,7.12.18,8:30,56,4,27C,Ambient,131,BKxBK,wellD,20,100,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+360,7.12.18,8:30,56,4,27C,Ambient,144,CUxBK,wellD,21,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+361,7.12.18,8:30,56,4,27C,Ambient,150,LSxSB,wellD,20,100,Long Sandy,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+362,7.12.18,8:30,56,4,27C,Ambient,151,DRxLS,wellD,19,95,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+363,7.12.18,8:30,56,4,27C,Ambient,154,LSxCU,wellD,19,95,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+364,7.12.18,8:30,56,4,27C,Ambient,157,LSxCU,wellD,19,95,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+365,7.12.18,8:30,56,4,27C,Ambient,158,CUxSB,wellD,19,95,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+366,7.12.18,8:30,56,4,27C,Ambient,159,BKxSB,wellD,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+367,7.12.18,8:30,56,4,27C,Ambient,161,DRxSB,wellD,20,100,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+368,7.12.18,8:30,56,4,27C,Ambient,167,SBxSB,wellD,20,100,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+369,7.12.18,8:30,56,4,27C,Ambient,168,LSxLS,wellD,18,90,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+370,7.12.18,8:30,56,4,27C,Ambient,169,DRxBK,wellD,20,100,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+371,7.12.18,8:30,56,4,27C,Ambient,170,CUxDR,wellD,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+372,7.12.18,8:30,56,4,27C,Ambient,175,DRxDR,wellD,18,90,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+373,7.12.18,8:30,56,4,27C,Ambient,178,SBxBK,wellD,20,100,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+374,7.12.18,8:30,56,4,27C,Ambient,182,CUxDR,wellD,17,85,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+375,7.12.18,8:30,56,4,27C,Ambient,187,CUxCU,wellD,20,100,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+376,7.12.18,8:30,56,4,27C,Ambient,5,BKxSB,wellE,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+377,7.12.18,8:30,56,4,27C,Ambient,9,BKxDR,wellE,19,95,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+378,7.12.18,8:30,56,4,27C,Ambient,16,BKxCU,wellE,18,90,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+379,7.12.18,8:30,56,4,27C,Ambient,32,CUxLS,wellE,21,100,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+380,7.12.18,8:30,56,4,27C,Ambient,43,BKxLS,wellE,20,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+381,7.12.18,8:30,56,4,27C,Ambient,46,BKxCU,wellE,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+382,7.12.18,8:30,56,4,27C,Ambient,52,DRxBK,wellE,19,95,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+383,7.12.18,8:30,56,4,27C,Ambient,55,BKxLS,wellE,20,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+384,7.12.18,8:30,56,4,27C,Ambient,58,BKxSB,wellE,NA,NA,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+385,7.12.18,8:30,56,4,27C,Ambient,61,BKxDR,wellE,20,100,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+386,7.12.18,8:30,56,4,27C,Ambient,66,BKxLS,wellE,17,85,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+387,7.12.18,8:30,56,4,27C,Ambient,72,DRxCU,wellE,20,100,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+388,7.12.18,8:30,56,4,27C,Ambient,75,BKxCU,wellE,18,90,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+389,7.12.18,8:30,56,4,27C,Ambient,81,BKxCU,wellE,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+390,7.12.18,8:30,56,4,27C,Ambient,86,BKxSB,wellE,18,90,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+391,7.12.18,8:30,56,4,27C,Ambient,99,CUxBK,wellE,20,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+392,7.12.18,8:30,56,4,27C,Ambient,106,SBxCU,wellE,21,100,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+393,7.12.18,8:30,56,4,27C,Ambient,109,LSxBK,wellE,19,95,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+394,7.12.18,8:30,56,4,27C,Ambient,112,LSxDR,wellE,20,100,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+395,7.12.18,8:30,56,4,27C,Ambient,116,SBxLS,wellE,20,100,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+396,7.12.18,8:30,56,4,27C,Ambient,131,BKxBK,wellE,17,85,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+397,7.12.18,8:30,56,4,27C,Ambient,144,CUxBK,wellE,19,95,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+398,7.12.18,8:30,56,4,27C,Ambient,150,LSxSB,wellE,19,95,Long Sandy,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+399,7.12.18,8:30,56,4,27C,Ambient,151,DRxLS,wellE,19,95,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+400,7.12.18,8:30,56,4,27C,Ambient,154,LSxCU,wellE,17,85,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+401,7.12.18,8:30,56,4,27C,Ambient,157,LSxCU,wellE,19,95,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+402,7.12.18,8:30,56,4,27C,Ambient,158,CUxSB,wellE,19,95,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+403,7.12.18,8:30,56,4,27C,Ambient,159,BKxSB,wellE,18,90,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+404,7.12.18,8:30,56,4,27C,Ambient,161,DRxSB,wellE,19,95,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+405,7.12.18,8:30,56,4,27C,Ambient,167,SBxSB,wellE,9,45,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+406,7.12.18,8:30,56,4,27C,Ambient,168,LSxLS,wellE,19,95,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+407,7.12.18,8:30,56,4,27C,Ambient,169,DRxBK,wellE,19,95,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+408,7.12.18,8:30,56,4,27C,Ambient,170,CUxDR,wellE,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+409,7.12.18,8:30,56,4,27C,Ambient,175,DRxDR,wellE,19,95,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+410,7.12.18,8:30,56,4,27C,Ambient,178,SBxBK,wellE,19,95,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+411,7.12.18,8:30,56,4,27C,Ambient,182,CUxDR,wellE,19,95,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+412,7.12.18,8:30,56,4,27C,Ambient,187,CUxCU,wellE,20,100,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+413,7.12.18,8:30,56,4,27C,Ambient,5,BKxSB,wellF,17,85,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+414,7.12.18,8:30,56,4,27C,Ambient,9,BKxDR,wellF,19,95,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+415,7.12.18,8:30,56,4,27C,Ambient,16,BKxCU,wellF,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+416,7.12.18,8:30,56,4,27C,Ambient,32,CUxLS,wellF,17,85,Curd,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+417,7.12.18,8:30,56,4,27C,Ambient,43,BKxLS,wellF,20,100,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+418,7.12.18,8:30,56,4,27C,Ambient,46,BKxCU,wellF,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+419,7.12.18,8:30,56,4,27C,Ambient,52,DRxBK,wellF,20,100,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+420,7.12.18,8:30,56,4,27C,Ambient,55,BKxLS,wellF,18,90,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+421,7.12.18,8:30,56,4,27C,Ambient,58,BKxSB,wellF,NA,NA,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+422,7.12.18,8:30,56,4,27C,Ambient,61,BKxDR,wellF,18,90,Backnumbers,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+423,7.12.18,8:30,56,4,27C,Ambient,66,BKxLS,wellF,19,95,Backnumbers,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,4
+424,7.12.18,8:30,56,4,27C,Ambient,72,DRxCU,wellF,19,95,Davies,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+425,7.12.18,8:30,56,4,27C,Ambient,75,BKxCU,wellF,19,95,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+426,7.12.18,8:30,56,4,27C,Ambient,81,BKxCU,wellF,20,100,Backnumbers,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,7
+427,7.12.18,8:30,56,4,27C,Ambient,86,BKxSB,wellF,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+428,7.12.18,8:30,56,4,27C,Ambient,99,CUxBK,wellF,21,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+429,7.12.18,8:30,56,4,27C,Ambient,106,SBxCU,wellF,20,100,Sand Bank 7,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+430,7.12.18,8:30,56,4,27C,Ambient,109,LSxBK,wellF,20,100,Long Sandy,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,4,2
+431,7.12.18,8:30,56,4,27C,Ambient,112,LSxDR,wellF,20,100,Long Sandy,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+432,7.12.18,8:30,56,4,27C,Ambient,116,SBxLS,wellF,19,95,Sand Bank 7,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,4
+433,7.12.18,8:30,56,4,27C,Ambient,131,BKxBK,wellF,19,95,Backnumbers,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,2
+434,7.12.18,8:30,56,4,27C,Ambient,144,CUxBK,wellF,20,100,Curd,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,2
+435,7.12.18,8:30,56,4,27C,Ambient,150,LSxSB,wellF,20,100,Long Sandy,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+436,7.12.18,8:30,56,4,27C,Ambient,151,DRxLS,wellF,20,100,Davies,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+437,7.12.18,8:30,56,4,27C,Ambient,154,LSxCU,wellF,20,100,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+438,7.12.18,8:30,56,4,27C,Ambient,157,LSxCU,wellF,19,95,Long Sandy,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+439,7.12.18,8:30,56,4,27C,Ambient,158,CUxSB,wellF,20,100,Curd,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,5
+440,7.12.18,8:30,56,4,27C,Ambient,159,BKxSB,wellF,20,100,Backnumbers,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,7,4
+441,7.12.18,8:30,56,4,27C,Ambient,161,DRxSB,wellF,18,90,Davies,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+442,7.12.18,8:30,56,4,27C,Ambient,167,SBxSB,wellF,20,100,Sand Bank 7,Sand Bank 7,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+443,7.12.18,8:30,56,4,27C,Ambient,168,LSxLS,wellF,20,100,Long Sandy,Long Sandy,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+444,7.12.18,8:30,56,4,27C,Ambient,169,DRxBK,wellF,18,90,Davies,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,2
+445,7.12.18,8:30,56,4,27C,Ambient,170,CUxDR,wellF,20,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+446,7.12.18,8:30,56,4,27C,Ambient,175,DRxDR,wellF,20,100,Davies,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+447,7.12.18,8:30,56,4,27C,Ambient,178,SBxBK,wellF,20,100,Sand Bank 7,Backnumbers,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,7
+448,7.12.18,8:30,56,4,27C,Ambient,182,CUxDR,wellF,22,100,Curd,Davies,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,2,3
+449,7.12.18,8:30,56,4,27C,Ambient,187,CUxCU,wellF,20,100,Curd,Curd,NA,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,6,5
+450,13.12.18,17:00,56,4,27C,Ambient,155.2,LSxSB,wellA,20,100,Long Sandy,Sand Bank 7,155,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+451,13.12.18,17:00,56,4,27C,Ambient,155.2,LSxSB,wellB,20,100,Long Sandy,Sand Bank 7,155,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+452,13.12.18,17:00,56,4,27C,Ambient,155.2,LSxSB,wellC,20,100,Long Sandy,Sand Bank 7,155,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+453,13.12.18,17:00,56,4,27C,Ambient,155.2,LSxSB,wellD,20,100,Long Sandy,Sand Bank 7,155,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+454,13.12.18,17:00,56,4,27C,Ambient,155.2,LSxSB,wellE,19,95,Long Sandy,Sand Bank 7,155,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+455,13.12.18,17:00,56,4,27C,Ambient,155.2,LSxSB,wellF,21,100,Long Sandy,Sand Bank 7,155,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+456,13.12.18,17:00,56,4,35.5C,Hot,144.2,LSxSB,wellA,20,100,Long Sandy,Sand Bank 7,144,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+457,13.12.18,17:00,56,4,35.5C,Hot,144.2,LSxSB,wellB,20,100,Long Sandy,Sand Bank 7,144,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+458,13.12.18,17:00,56,4,35.5C,Hot,144.2,LSxSB,wellC,20,100,Long Sandy,Sand Bank 7,144,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+459,13.12.18,17:00,56,4,35.5C,Hot,144.2,LSxSB,wellD,19,95,Long Sandy,Sand Bank 7,144,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+460,13.12.18,17:00,56,4,35.5C,Hot,144.2,LSxSB,wellE,18,90,Long Sandy,Sand Bank 7,144,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+461,13.12.18,17:00,56,4,35.5C,Hot,144.2,LSxSB,wellF,19,95,Long Sandy,Sand Bank 7,144,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+462,19.12.18,6:30,56,4,27C,Ambient,29.3,DRxLS,wellA,20,100,Davies,Long Sandy,49,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+463,19.12.18,6:30,56,4,27C,Ambient,29.3,DRxLS,wellB,20,100,Davies,Long Sandy,49,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+464,19.12.18,6:30,56,4,27C,Ambient,29.3,DRxLS,wellC,20,100,Davies,Long Sandy,49,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+465,19.12.18,6:30,56,4,27C,Ambient,29.3,DRxLS,wellD,20,100,Davies,Long Sandy,49,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+466,19.12.18,6:30,56,4,27C,Ambient,29.3,DRxLS,wellE,20,100,Davies,Long Sandy,49,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+467,19.12.18,6:30,56,4,27C,Ambient,29.3,DRxLS,wellF,20,100,Davies,Long Sandy,49,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+468,19.12.18,6:30,56,4,35.5C,Hot,29.3,DRxLS,wellA,11,55,Davies,Long Sandy,61,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+469,19.12.18,6:30,56,4,35.5C,Hot,29.3,DRxLS,wellB,17,85,Davies,Long Sandy,61,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+470,19.12.18,6:30,56,4,35.5C,Hot,29.3,DRxLS,wellC,13,61.9047619,Davies,Long Sandy,61,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+471,19.12.18,6:30,56,4,35.5C,Hot,29.3,DRxLS,wellD,16,80,Davies,Long Sandy,61,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+472,19.12.18,6:30,56,4,35.5C,Hot,29.3,DRxLS,wellE,14,66.66666667,Davies,Long Sandy,61,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+473,19.12.18,6:30,56,4,35.5C,Hot,29.3,DRxLS,wellF,18,90,Davies,Long Sandy,61,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+474,19.12.18,6:30,56,4,27C,Ambient,29.3,LSxSB,wellA,20,100,Long Sandy,Sand Bank 7,151,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+475,19.12.18,6:30,56,4,27C,Ambient,29.3,LSxSB,wellB,20,100,Long Sandy,Sand Bank 7,151,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+476,19.12.18,6:30,56,4,27C,Ambient,29.3,LSxSB,wellC,NA,NA,Long Sandy,Sand Bank 7,151,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+477,19.12.18,6:30,56,4,27C,Ambient,29.3,LSxSB,wellD,20,100,Long Sandy,Sand Bank 7,151,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+478,19.12.18,6:30,56,4,27C,Ambient,29.3,LSxSB,wellE,20,100,Long Sandy,Sand Bank 7,151,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+479,19.12.18,6:30,56,4,27C,Ambient,29.3,LSxSB,wellF,20,100,Long Sandy,Sand Bank 7,151,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+480,19.12.18,6:30,56,4,35.5C,Hot,69.3,LSxSB,wellA,18,85.71428571,Long Sandy,Sand Bank 7,186,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+481,19.12.18,6:30,56,4,35.5C,Hot,69.3,LSxSB,wellB,15,75,Long Sandy,Sand Bank 7,186,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+482,19.12.18,6:30,56,4,35.5C,Hot,69.3,LSxSB,wellC,15,75,Long Sandy,Sand Bank 7,186,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+483,19.12.18,6:30,56,4,35.5C,Hot,69.3,LSxSB,wellD,14,70,Long Sandy,Sand Bank 7,186,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+484,19.12.18,6:30,56,4,35.5C,Hot,69.3,LSxSB,wellE,13,65,Long Sandy,Sand Bank 7,186,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+485,19.12.18,6:30,56,4,35.5C,Hot,69.3,LSxSB,wellF,16,80,Long Sandy,Sand Bank 7,186,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+486,19.12.18,6:30,56,4,35.5C,Hot,47.3,LSxSB,wellA,6,66.66666667,Long Sandy,Sand Bank 7,58,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+487,19.12.18,6:30,56,4,35.5C,Hot,47.3,LSxSB,wellB,9,100,Long Sandy,Sand Bank 7,58,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+488,19.12.18,6:30,56,4,35.5C,Hot,47.3,LSxSB,wellC,9,100,Long Sandy,Sand Bank 7,58,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+489,19.12.18,6:30,56,4,35.5C,Hot,47.3,LSxSB,wellD,8,88.88888889,Long Sandy,Sand Bank 7,58,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+490,19.12.18,6:30,56,4,35.5C,Hot,47.3,LSxSB,wellE,8,88.88888889,Long Sandy,Sand Bank 7,58,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+491,19.12.18,6:30,56,4,35.5C,Hot,47.3,LSxSB,wellF,8,88.88888889,Long Sandy,Sand Bank 7,58,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,5,6
+492,19.12.18,6:30,56,4,27C,Ambient,73.3,SBxDR,wellA,10,100,Sand Bank 7,Davies,81,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+493,19.12.18,6:30,56,4,27C,Ambient,73.3,SBxDR,wellB,10,100,Sand Bank 7,Davies,81,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+494,19.12.18,6:30,56,4,27C,Ambient,73.3,SBxDR,wellC,10,100,Sand Bank 7,Davies,81,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+495,19.12.18,6:30,56,4,27C,Ambient,73.3,SBxDR,wellD,10,100,Sand Bank 7,Davies,81,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+496,19.12.18,6:30,56,4,27C,Ambient,73.3,SBxDR,wellE,10,100,Sand Bank 7,Davies,81,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+497,19.12.18,6:30,56,4,27C,Ambient,73.3,SBxDR,wellF,10,100,Sand Bank 7,Davies,81,NA,NA,NA,NA,NA,NA,NA,NA,larvae,,,,,,,,,,3,3
+,,,,2,26,Ambient,,BKxBK,,,23.52941176,Backnumbers,Backnumbers,,,,,,,,,,juvenile,17,4,13,0.382352941,0.217970898,0.586140324,0.2494177,C1,1,2,2
+,,,,2,26,Ambient,,BKxCU,,,100,Backnumbers,Curd,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,1,2,7
+,,,,2,26,Ambient,,BKxDR,,,71.42857143,Backnumbers,Davies,,,,,,,,,,juvenile,7,5,2,0.142857143,0.654653671,0.515399716,0.039596769,C1,1,2,3
+,,,,2,26,Ambient,,BKxLS,,,75,Backnumbers,Long Sandy,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,C1,1,2,4
+,,,,2,26,Ambient,,BKxSB,,,100,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,C1,1,7,4
+,,,,2,26,Ambient,,CUxBK,,,87.5,Curd,Backnumbers,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,C1,1,7,2
+,,,,2,26,Ambient,,CUxCU,,,90.90909091,Curd,Curd,,,,,,,,,,juvenile,11,10,1,0.045454545,0.977008421,0.308466776,0.006698017,C1,1,6,5
+,,,,2,26,Ambient,,CUxDR,,,75,Curd,Davies,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,C1,1,2,3
+,,,,2,26,Ambient,,CUxLS,,,57.14285714,Curd,Long Sandy,,,,,,,,,,juvenile,7,4,3,0.214285714,0.511766316,0.584264497,0.078591747,C1,1,2,3
+,,,,2,26,Ambient,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,C1,1,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,1,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,C1,1,3,3
+,,,,2,26,Ambient,,DRxDR,,,87.5,Davies,Davies,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,C1,1,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,C1,1,3,3
+,,,,2,26,Ambient,,LSxBK,,,66.66666667,Long Sandy,Backnumbers,,,,,,,,,,juvenile,9,6,3,0.166666667,0.527046277,0.468243065,0.059323415,C1,1,4,2
+,,,,2,26,Ambient,,LSxCU,,,87.5,Long Sandy,Curd,,,,,,,,,,juvenile,16,14,2,0.0625,0.684653197,0.239143111,0.016334361,C1,1,3,2
+,,,,2,26,Ambient,,LSxLS,,,50,Long Sandy,Long Sandy,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,C1,1,5,6
+,,,,2,26,Ambient,,SBxBK,,,88.88888889,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,C1,1,3,7
+,,,,2,26,Ambient,,SBxDR,,,75,Sand Bank 7,Davies,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,C1,1,3,3
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,13,13,0,0,Inf,NA,NA,C1,1,3,4
+,,,,2,26,Ambient,,SBxSB,,,69.23076923,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,13,9,4,0.148148148,0.461479103,0.366022643,0.059963159,C1,1,5,6
+,,,,2,26,Ambient,,BKxBK,,,91.66666667,Backnumbers,Backnumbers,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,C1,2,2,2
+,,,,2,26,Ambient,,BKxCU,,,50,Backnumbers,Curd,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,C1,2,2,7
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,2,2,3
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,C1,2,2,4
+,,,,2,26,Ambient,,BKxSB,,,100,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,2,7,4
+,,,,2,26,Ambient,,CUxBK,,,90,Curd,Backnumbers,,,,,,,,,,juvenile,10,9,1,0.05,0.974679434,0.33776811,0.007401528,C1,2,7,2
+,,,,2,26,Ambient,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,C1,2,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,C1,2,2,3
+,,,,2,26,Ambient,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,C1,2,2,3
+,,,,2,26,Ambient,,CUxSB,,,85.71428571,Curd,Sand Bank 7,,,,,,,,,,juvenile,7,6,1,0.071428571,0.963624112,0.472182944,0.01080522,C1,2,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,C1,2,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,C1,2,3,3
+,,,,2,26,Ambient,,DRxDR,,,100,Davies,Davies,,,,,,,,,,juvenile,14,14,0,0,Inf,NA,NA,C1,2,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,C1,2,3,3
+,,,,2,26,Ambient,,LSxBK,,,78.94736842,Long Sandy,Backnumbers,,,,,,,,,,juvenile,19,15,4,0.105263158,0.472952651,0.265983332,0.041657995,C1,2,4,2
+,,,,2,26,Ambient,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,2,3,2
+,,,,2,26,Ambient,,LSxCU,,,50,Long Sandy,Curd,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,C1,2,3,2
+,,,,2,26,Ambient,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,2,5,6
+,,,,2,26,Ambient,,LSxSB,,,91.30434783,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,23,21,2,0.043478261,0.691564075,0.168629119,0.011210159,C1,2,5,6
+,,,,2,26,Ambient,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,C1,2,3,7
+,,,,2,26,Ambient,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,2,3,3
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,C1,2,3,4
+,,,,2,26,Ambient,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,12,12,0,0,Inf,NA,NA,C1,2,5,6
+,,,,2,26,Ambient,,BKxBK,,,22.22222222,Backnumbers,Backnumbers,,,,,,,,,,juvenile,9,2,7,0.388888889,0.29546842,0.693950847,0.21793268,C1,3,2,2
+,,,,2,26,Ambient,,BKxCU,,,100,Backnumbers,Curd,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,3,2,7
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,C1,3,2,3
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,3,2,4
+,,,,2,26,Ambient,,BKxSB,,,66.66666667,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,C1,3,7,4
+,,,,2,26,Ambient,,CUxCU,,,91.66666667,Curd,Curd,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,C1,3,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,C1,3,2,3
+,,,,2,26,Ambient,,CUxLS,,,96,Curd,Long Sandy,,,,,,,,,,juvenile,25,24,1,0.02,0.989949494,0.139211955,0.002873316,C1,3,2,3
+,,,,2,26,Ambient,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,C1,3,2,5
+,,,,2,26,Ambient,,DRxBK,,,66.66666667,Davies,Backnumbers,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,C1,3,3,2
+,,,,2,26,Ambient,,DRxDR,,,88.88888889,Davies,Davies,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,C1,3,3,3
+,,,,2,26,Ambient,,LSxBK,,,100,Long Sandy,Backnumbers,,,,,,,,,,juvenile,11,11,0,0,Inf,NA,NA,C1,3,4,2
+,,,,2,26,Ambient,,LSxCU,,,76.92307692,Long Sandy,Curd,,,,,,,,,,juvenile,13,10,3,0.115384615,0.543020989,0.334478503,0.039804081,C1,3,3,2
+,,,,2,26,Ambient,,LSxLS,,,93.75,Long Sandy,Long Sandy,,,,,,,,,,juvenile,16,15,1,0.03125,0.984250984,0.215102758,0.004539981,C1,3,5,6
+,,,,2,26,Ambient,,LSxSB,,,91.66666667,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,C1,3,5,6
+,,,,2,26,Ambient,,SBxBK,,,80,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,C1,3,3,7
+,,,,2,26,Ambient,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,3,3,3
+,,,,2,26,Ambient,,SBxLS,,,83.33333333,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,C1,3,3,4
+,,,,2,26,Ambient,,SBxSB,,,90.90909091,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,11,10,1,0.045454545,0.977008421,0.308466776,0.006698017,C1,3,5,6
+,,,,2,32,Hot,,BKxBK,,,50,Backnumbers,Backnumbers,,,,,,,,,,juvenile,10,5,5,0.25,0.387298335,0.534083239,0.117022957,C1,4,2,2
+,,,,2,32,Hot,,BKxCU,,,0,Backnumbers,Curd,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,C1,4,2,7
+,,,,2,32,Hot,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,4,2,3
+,,,,2,32,Hot,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,4,2,4
+,,,,2,32,Hot,,BKxSB,,,0,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,C1,4,7,4
+,,,,2,32,Hot,,CUxBK,,,33.33333333,Curd,Backnumbers,,,,,,,,,,juvenile,6,2,4,0.333333333,0.40824829,0.741959705,0.149753565,C1,4,7,2
+,,,,2,32,Hot,,CUxCU,,,75,Curd,Curd,,,,,,,,,,juvenile,8,6,2,0.125,0.661437828,0.457011273,0.034189529,C1,4,6,5
+,,,,2,32,Hot,,CUxDR,,,77.77777778,Curd,Davies,,,,,,,,,,juvenile,18,14,4,0.111111111,0.471404521,0.279909569,0.044105956,C1,4,2,3
+,,,,2,32,Hot,,CUxLS,,,95.23809524,Curd,Long Sandy,,,,,,,,,,juvenile,21,20,1,0.023809524,0.98802352,0.165104099,0.003433551,C1,4,2,3
+,,,,2,32,Hot,,CUxSB,,,85.71428571,Curd,Sand Bank 7,,,,,,,,,,juvenile,7,6,1,0.071428571,0.963624112,0.472182944,0.01080522,C1,4,2,5
+,,,,2,32,Hot,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,C1,4,3,2
+,,,,2,32,Hot,,DRxCU,,,50,Davies,Curd,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,C1,4,3,3
+,,,,2,32,Hot,,DRxDR,,,61.53846154,Davies,Davies,,,,,,,,,,juvenile,13,8,5,0.192307692,0.401918476,0.422775959,0.087474814,C1,4,3,3
+,,,,2,32,Hot,,DRxSB,,,80,Davies,Sand Bank 7,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,C1,4,3,3
+,,,,2,32,Hot,,LSxBK,,,33.33333333,Long Sandy,Backnumbers,,,,,,,,,,juvenile,9,3,6,0.333333333,0.333333333,0.640637849,0.173438256,C1,4,4,2
+,,,,2,32,Hot,,LSxCU,,,83.33333333,Long Sandy,Curd,,,,,,,,,,juvenile,12,10,2,0.083333333,0.6770032,0.314112286,0.022108159,C1,4,3,2
+,,,,2,32,Hot,,LSxLS,,,83.33333333,Long Sandy,Long Sandy,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,C1,4,5,6
+,,,,2,32,Hot,,LSxSB,,,93.10344828,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,29,27,2,0.034482759,0.694808334,0.134593451,0.008834461,C1,4,5,6
+,,,,2,32,Hot,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,C1,4,3,7
+,,,,2,32,Hot,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,4,3,3
+,,,,2,32,Hot,,SBxLS,,,83.33333333,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,C1,4,3,4
+,,,,2,32,Hot,,SBxSB,,,90.90909091,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,11,10,1,0.045454545,0.977008421,0.308466776,0.006698017,C1,4,5,6
+,,,,2,32,Hot,,BKxBK,,,40,Backnumbers,Backnumbers,,,,,,,,,,juvenile,10,4,6,0.3,0.341565026,0.585951852,0.153596238,C1,5,2,2
+,,,,2,32,Hot,,BKxCU,,,0,Backnumbers,Curd,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,C1,5,2,7
+,,,,2,32,Hot,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,5,2,3
+,,,,2,32,Hot,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,5,2,4
+,,,,2,32,Hot,,BKxSB,,,75,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,C1,5,7,4
+,,,,2,32,Hot,,CUxBK,,,30,Curd,Backnumbers,,,,,,,,,,juvenile,10,3,7,0.35,0.3047247,0.635989842,0.192613139,C1,5,7,2
+,,,,2,32,Hot,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,C1,5,6,5
+,,,,2,32,Hot,,CUxDR,,,81.81818182,Curd,Davies,,,,,,,,,,juvenile,11,9,2,0.090909091,0.674199862,0.340790342,0.024250872,C1,5,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,C1,5,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,C1,5,2,5
+,,,,2,32,Hot,,DRxBK,,,93.33333333,Davies,Backnumbers,,,,,,,,,,juvenile,15,14,1,0.033333333,0.98319208,0.228967246,0.004852708,C1,5,3,2
+,,,,2,32,Hot,,DRxCU,,,75,Davies,Curd,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,C1,5,3,3
+,,,,2,32,Hot,,DRxDR,,,50,Davies,Davies,,,,,,,,,,juvenile,12,6,6,0.25,0.353553391,0.499902375,0.125024411,C1,5,3,3
+,,,,2,32,Hot,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,C1,5,3,3
+,,,,2,32,Hot,,LSxBK,,,86.66666667,Long Sandy,Backnumbers,,,,,,,,,,juvenile,30,26,4,0.066666667,0.483045892,0.171821754,0.025866599,C1,5,4,2
+,,,,2,32,Hot,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,C1,5,3,2
+,,,,2,32,Hot,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,5,5,6
+,,,,2,32,Hot,,LSxSB,,,88.23529412,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,17,15,2,0.058823529,0.685994341,0.225668281,0.015333159,C1,5,5,6
+,,,,2,32,Hot,,SBxBK,,,72.72727273,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,11,8,3,0.136363636,0.53654337,0.390305902,0.047642224,C1,5,3,7
+,,,,2,32,Hot,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,C1,5,3,3
+,,,,2,32,Hot,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,C1,5,3,4
+,,,,2,32,Hot,,SBxSB,,,81.25,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,16,13,3,0.09375,0.549621082,0.275302141,0.031925151,C1,5,5,6
+,,,,2,32,Hot,,BKxBK,,,54.54545455,Backnumbers,Backnumbers,,,,,,,,,,juvenile,11,6,5,0.227272727,0.393122697,0.491104563,0.105176975,C1,6,2,2
+,,,,2,32,Hot,,BKxDR,,,0,Backnumbers,Davies,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,C1,6,2,3
+,,,,2,32,Hot,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,C1,6,2,4
+,,,,2,32,Hot,,BKxSB,,,0,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,C1,6,7,4
+,,,,2,32,Hot,,CUxBK,,,0,Curd,Backnumbers,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,C1,6,7,2
+,,,,2,32,Hot,,CUxCU,,,62.5,Curd,Curd,,,,,,,,,,juvenile,16,10,6,0.1875,0.367990036,0.385686963,0.09115229,C1,6,6,5
+,,,,2,32,Hot,,CUxDR,,,84.61538462,Curd,Davies,,,,,,,,,,juvenile,13,11,2,0.076923077,0.67936622,0.2912958,0.020313234,C1,6,2,3
+,,,,2,32,Hot,,CUxLS,,,84.61538462,Curd,Long Sandy,,,,,,,,,,juvenile,13,11,2,0.076923077,0.67936622,0.2912958,0.020313234,C1,6,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,C1,6,2,5
+,,,,2,32,Hot,,DRxBK,,,28.57142857,Davies,Backnumbers,,,,,,,,,,juvenile,7,2,5,0.357142857,0.358568583,0.721200634,0.176859274,C1,6,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,C1,6,3,3
+,,,,2,32,Hot,,DRxDR,,,75,Davies,Davies,,,,,,,,,,juvenile,12,9,3,0.125,0.540061725,0.360256136,0.043371919,C1,6,3,3
+,,,,2,32,Hot,,DRxSB,,,25,Davies,Sand Bank 7,,,,,,,,,,juvenile,8,2,6,0.375,0.322748612,0.705919834,0.199208172,C1,6,3,3
+,,,,2,32,Hot,,LSxBK,,,56,Long Sandy,Backnumbers,,,,,,,,,,juvenile,25,14,11,0.22,0.266287609,0.370755075,0.130544403,C1,6,4,2
+,,,,2,32,Hot,,LSxCU,,,75,Long Sandy,Curd,,,,,,,,,,juvenile,12,9,3,0.125,0.540061725,0.360256136,0.043371919,C1,6,3,2
+,,,,2,32,Hot,,LSxLS,,,40,Long Sandy,Long Sandy,,,,,,,,,,juvenile,5,2,3,0.25,0.5,0.666102065,0.093829464,C1,6,5,6
+,,,,2,32,Hot,,LSxSB,,,50,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,12,6,6,0.25,0.353553391,0.499902375,0.125024411,C1,6,5,6
+,,,,2,32,Hot,,SBxBK,,,50,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,6,3,3,0.25,0.5,0.666102065,0.093829464,C1,6,3,7
+,,,,2,32,Hot,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,C1,6,3,3
+,,,,2,32,Hot,,SBxLS,,,77.77777778,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,9,7,2,0.111111111,0.666666667,0.410416853,0.030080829,C1,6,3,4
+,,,,2,32,Hot,,SBxSB,,,50,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,16,8,8,0.25,0.306186218,0.455581615,0.137187274,C1,6,5,6
+,,,,2,26,Ambient,,BKxBK,,,61.53846154,Backnumbers,Backnumbers,,,,,,,,,,juvenile,13,8,5,0.192307692,0.401918476,0.422775959,0.087474814,D1,19,2,2
+,,,,2,26,Ambient,,BKxDR,,,50,Backnumbers,Davies,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,D1,19,2,3
+,,,,2,26,Ambient,,BKxLS,,,66.66666667,Backnumbers,Long Sandy,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,D1,19,2,4
+,,,,2,26,Ambient,,BKxSB,,,100,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,19,7,4
+,,,,2,26,Ambient,,CUxBK,,,72.22222222,Curd,Backnumbers,,,,,,,,,,juvenile,18,13,5,0.138888889,0.414996653,0.313266024,0.061577452,D1,19,7,2
+,,,,2,26,Ambient,,CUxCU,,,88.88888889,Curd,Curd,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,D1,19,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,D1,19,2,3
+,,,,2,26,Ambient,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,19,2,3
+,,,,2,26,Ambient,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,19,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,D1,19,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,19,3,3
+,,,,2,26,Ambient,,DRxDR,,,100,Davies,Davies,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,19,3,3
+,,,,2,26,Ambient,,LSxBK,,,54.16666667,Long Sandy,Backnumbers,,,,,,,,,,juvenile,24,13,11,0.229166667,0.264718261,0.385017119,0.136402665,D1,19,4,2
+,,,,2,26,Ambient,,LSxCU,,,66.66666667,Long Sandy,Curd,,,,,,,,,,juvenile,6,4,2,0.166666667,0.645497224,0.590604815,0.047032766,D1,19,3,2
+,,,,2,26,Ambient,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,19,5,6
+,,,,2,26,Ambient,,LSxSB,,,77.77777778,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,9,7,2,0.111111111,0.666666667,0.410416853,0.030080829,D1,19,5,6
+,,,,2,26,Ambient,,SBxBK,,,94.11764706,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,17,16,1,0.029411765,0.985184366,0.202820354,0.004265114,D1,19,3,7
+,,,,2,26,Ambient,,SBxDR,,,66.66666667,Sand Bank 7,Davies,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,D1,19,3,3
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,19,3,4
+,,,,2,26,Ambient,,SBxSB,,,92.85714286,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,14,13,1,0.035714286,0.981980506,0.244740189,0.005211691,D1,19,5,6
+,,,,2,26,Ambient,,BKxBK,,,100,Backnumbers,Backnumbers,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,20,2,2
+,,,,2,26,Ambient,,BKxCU,,,100,Backnumbers,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,20,2,7
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,20,2,3
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,20,2,4
+,,,,2,26,Ambient,,BKxSB,,,0,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,D1,20,7,4
+,,,,2,26,Ambient,,CUxBK,,,75,Curd,Backnumbers,,,,,,,,,,juvenile,40,30,10,0.125,0.295803989,0.223202382,0.070003733,D1,20,7,2
+,,,,2,26,Ambient,,CUxCU,,,85.71428571,Curd,Curd,,,,,,,,,,juvenile,14,12,2,0.071428571,0.681385144,0.271561407,0.018787798,D1,20,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,20,2,3
+,,,,2,26,Ambient,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,13,13,0,0,Inf,NA,NA,D1,20,2,3
+,,,,2,26,Ambient,,CUxSB,,,87.5,Curd,Sand Bank 7,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,D1,20,2,5
+,,,,2,26,Ambient,,DRxBK,,,88.88888889,Davies,Backnumbers,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,D1,20,3,2
+,,,,2,26,Ambient,,DRxCU,,,50,Davies,Curd,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,D1,20,3,3
+,,,,2,26,Ambient,,DRxDR,,,70.96774194,Davies,Davies,,,,,,,,,,juvenile,31,22,9,0.14516129,0.308191627,0.265573054,0.079344647,D1,20,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,D1,20,3,3
+,,,,2,26,Ambient,,LSxBK,,,75,Long Sandy,Backnumbers,,,,,,,,,,juvenile,20,15,5,0.125,0.418330013,0.283787437,0.055058815,D1,20,4,2
+,,,,2,26,Ambient,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,20,3,2
+,,,,2,26,Ambient,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,20,5,6
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,20,5,6
+,,,,2,26,Ambient,,SBxBK,,,0,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,D1,20,3,7
+,,,,2,26,Ambient,,SBxLS,,,80,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,D1,20,3,4
+,,,,2,26,Ambient,,SBxSB,,,87.5,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,D1,20,5,6
+,,,,2,26,Ambient,,BKxBK,,,29.16666667,Backnumbers,Backnumbers,,,,,,,,,,juvenile,24,7,17,0.354166667,0.194910739,0.518938636,0.24171264,D1,21,2,2
+,,,,2,26,Ambient,,BKxCU,,,0,Backnumbers,Curd,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,D1,21,2,7
+,,,,2,26,Ambient,,BKxDR,,,66.66666667,Backnumbers,Davies,,,,,,,,,,juvenile,6,4,2,0.166666667,0.645497224,0.590604815,0.047032766,D1,21,2,3
+,,,,2,26,Ambient,,BKxSB,,,62.5,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,8,5,3,0.1875,0.5204165,0.519972769,0.067611714,D1,21,7,4
+,,,,2,26,Ambient,,CUxBK,,,100,Curd,Backnumbers,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,21,7,2
+,,,,2,26,Ambient,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,D1,21,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,D1,21,2,3
+,,,,2,26,Ambient,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,21,2,3
+,,,,2,26,Ambient,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,D1,21,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,D1,21,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,21,3,3
+,,,,2,26,Ambient,,DRxDR,,,100,Davies,Davies,,,,,,,,,,juvenile,14,14,0,0,Inf,NA,NA,D1,21,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,21,3,3
+,,,,2,26,Ambient,,LSxBK,,,89.79591837,Long Sandy,Backnumbers,,,,,,,,,,juvenile,49,44,5,0.051020408,0.435655734,0.119832539,0.021722665,D1,21,4,2
+,,,,2,26,Ambient,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,21,3,2
+,,,,2,26,Ambient,,LSxLS,,,33.33333333,Long Sandy,Long Sandy,,,,,,,,,,juvenile,3,1,2,0.333333333,0.577350269,1,0.107507139,D1,21,5,6
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,D1,21,5,6
+,,,,2,26,Ambient,,SBxBK,,,83.33333333,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,D1,21,3,7
+,,,,2,26,Ambient,,SBxLS,,,75,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,D1,21,3,4
+,,,,2,26,Ambient,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,17,17,0,0,Inf,NA,NA,D1,21,5,6
+,,,,2,32,Hot,,BKxBK,,,90,Backnumbers,Backnumbers,,,,,,,,,,juvenile,10,9,1,0.05,0.974679434,0.33776811,0.007401528,D1,22,2,2
+,,,,2,32,Hot,,BKxCU,,,50,Backnumbers,Curd,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,D1,22,2,7
+,,,,2,32,Hot,,BKxDR,,,50,Backnumbers,Davies,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,D1,22,2,3
+,,,,2,32,Hot,,BKxLS,,,33.33333333,Backnumbers,Long Sandy,,,,,,,,,,juvenile,3,1,2,0.333333333,0.577350269,1,0.107507139,D1,22,2,4
+,,,,2,32,Hot,,BKxSB,,,33.33333333,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,9,3,6,0.333333333,0.333333333,0.640637849,0.173438256,D1,22,7,4
+,,,,2,32,Hot,,CUxBK,,,50,Curd,Backnumbers,,,,,,,,,,juvenile,24,12,12,0.25,0.25,0.408075381,0.153157978,D1,22,7,2
+,,,,2,32,Hot,,CUxCU,,,50,Curd,Curd,,,,,,,,,,juvenile,8,4,4,0.25,0.433012702,0.584145572,0.106993878,D1,22,6,5
+,,,,2,32,Hot,,CUxDR,,,85.71428571,Curd,Davies,,,,,,,,,,juvenile,7,6,1,0.071428571,0.963624112,0.472182944,0.01080522,D1,22,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,22,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,D1,22,2,5
+,,,,2,32,Hot,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,22,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,22,3,3
+,,,,2,32,Hot,,DRxDR,,,100,Davies,Davies,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,D1,22,3,3
+,,,,2,32,Hot,,DRxSB,,,88.88888889,Davies,Sand Bank 7,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,D1,22,3,3
+,,,,2,32,Hot,,LSxBK,,,90.90909091,Long Sandy,Backnumbers,,,,,,,,,,juvenile,11,10,1,0.045454545,0.977008421,0.308466776,0.006698017,D1,22,4,2
+,,,,2,32,Hot,,LSxCU,,,50,Long Sandy,Curd,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,D1,22,3,2
+,,,,2,32,Hot,,LSxLS,,,75,Long Sandy,Long Sandy,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,D1,22,5,6
+,,,,2,32,Hot,,LSxSB,,,77.77777778,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,9,7,2,0.111111111,0.666666667,0.410416853,0.030080829,D1,22,5,6
+,,,,2,32,Hot,,SBxBK,,,84.61538462,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,13,11,2,0.076923077,0.67936622,0.2912958,0.020313234,D1,22,3,7
+,,,,2,32,Hot,,SBxDR,,,0,Sand Bank 7,Davies,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,D1,22,3,3
+,,,,2,32,Hot,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,22,3,4
+,,,,2,32,Hot,,SBxSB,,,60,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,15,9,6,0.2,0.365148372,0.409114482,0.097772144,D1,22,5,6
+,,,,2,32,Hot,,BKxBK,,,63.63636364,Backnumbers,Backnumbers,,,,,,,,,,juvenile,11,7,4,0.181818182,0.452267017,0.441171748,0.074931932,D1,23,2,2
+,,,,2,32,Hot,,BKxCU,,,50,Backnumbers,Curd,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,D1,23,2,7
+,,,,2,32,Hot,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,D1,23,2,3
+,,,,2,32,Hot,,BKxSB,,,25,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,4,1,3,0.375,0.456435465,0.917381208,0.153289602,D1,23,7,4
+,,,,2,32,Hot,,CUxBK,,,100,Curd,Backnumbers,,,,,,,,,,juvenile,22,22,0,0,Inf,NA,NA,D1,23,7,2
+,,,,2,32,Hot,,CUxCU,,,40,Curd,Curd,,,,,,,,,,juvenile,5,2,3,0.3,0.483045892,0.773197895,0.116399696,D1,23,6,5
+,,,,2,32,Hot,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,23,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,23,23,0,0,Inf,NA,NA,D1,23,2,3
+,,,,2,32,Hot,,CUxSB,,,83.33333333,Curd,Sand Bank 7,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,D1,23,2,5
+,,,,2,32,Hot,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,23,3,2
+,,,,2,32,Hot,,DRxCU,,,50,Davies,Curd,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,D1,23,3,3
+,,,,2,32,Hot,,DRxDR,,,75,Davies,Davies,,,,,,,,,,juvenile,12,9,3,0.125,0.540061725,0.360256136,0.043371919,D1,23,3,3
+,,,,2,32,Hot,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,23,3,3
+,,,,2,32,Hot,,LSxBK,,,60,Long Sandy,Backnumbers,,,,,,,,,,juvenile,20,12,8,0.2,0.316227766,0.371709412,0.107610942,D1,23,4,2
+,,,,2,32,Hot,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,23,3,2
+,,,,2,32,Hot,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,D1,23,5,6
+,,,,2,32,Hot,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,23,5,6
+,,,,2,32,Hot,,SBxBK,,,91.66666667,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,D1,23,3,7
+,,,,2,32,Hot,,SBxDR,,,83.33333333,Sand Bank 7,Davies,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,D1,23,3,3
+,,,,2,32,Hot,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,23,3,4
+,,,,2,32,Hot,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,D1,23,5,6
+,,,,2,32,Hot,,BKxBK,,,94.44444444,Backnumbers,Backnumbers,,,,,,,,,,juvenile,18,17,1,0.027777778,0.986013297,0.19186402,0.004021624,D1,24,2,2
+,,,,2,32,Hot,,BKxCU,,,50,Backnumbers,Curd,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,D1,24,2,7
+,,,,2,32,Hot,,BKxDR,,,80,Backnumbers,Davies,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,D1,24,2,3
+,,,,2,32,Hot,,BKxLS,,,50,Backnumbers,Long Sandy,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,D1,24,2,4
+,,,,2,32,Hot,,BKxSB,,,50,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,8,4,4,0.25,0.433012702,0.584145572,0.106993878,D1,24,7,4
+,,,,2,32,Hot,,CUxBK,,,23.52941176,Curd,Backnumbers,,,,,,,,,,juvenile,17,4,13,0.382352941,0.217970898,0.586140324,0.2494177,D1,24,7,2
+,,,,2,32,Hot,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,D1,24,6,5
+,,,,2,32,Hot,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,D1,24,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,17,17,0,0,Inf,NA,NA,D1,24,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,24,2,5
+,,,,2,32,Hot,,DRxBK,,,91.66666667,Davies,Backnumbers,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,D1,24,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,D1,24,3,3
+,,,,2,32,Hot,,DRxDR,,,70,Davies,Davies,,,,,,,,,,juvenile,10,7,3,0.15,0.532290647,0.425772767,0.05284509,D1,24,3,3
+,,,,2,32,Hot,,DRxSB,,,75,Davies,Sand Bank 7,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,D1,24,3,3
+,,,,2,32,Hot,,LSxBK,,,100,Long Sandy,Backnumbers,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,D1,24,4,2
+,,,,2,32,Hot,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,D1,24,3,2
+,,,,2,32,Hot,,LSxLS,,,80,Long Sandy,Long Sandy,,,,,,,,,,juvenile,10,8,2,0.1,0.670820393,0.372394582,0.026853237,D1,24,5,6
+,,,,2,32,Hot,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,D1,24,5,6
+,,,,2,32,Hot,,SBxBK,,,77.77777778,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,9,7,2,0.111111111,0.666666667,0.410416853,0.030080829,D1,24,3,7
+,,,,2,32,Hot,,SBxDR,,,0,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,D1,24,3,3
+,,,,2,32,Hot,,SBxLS,,,85.71428571,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,7,6,1,0.071428571,0.963624112,0.472182944,0.01080522,D1,24,3,4
+,,,,2,32,Hot,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,13,13,0,0,Inf,NA,NA,D1,24,5,6
+,,,,2,26,Ambient,,BKxBK,,,14.28571429,Backnumbers,Backnumbers,,,,,,,,,,juvenile,7,1,6,0.428571429,0.3086067,0.784710952,0.234065128,SED,13,2,2
+,,,,2,26,Ambient,,BKxDR,,,0,Backnumbers,Davies,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,SED,13,2,3
+,,,,2,26,Ambient,,BKxLS,,,80,Backnumbers,Long Sandy,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,SED,13,2,4
+,,,,2,26,Ambient,,BKxSB,,,25,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,4,1,3,0.375,0.456435465,0.917381208,0.153289602,SED,13,7,4
+,,,,2,26,Ambient,,CUxBK,,,72.72727273,Curd,Backnumbers,,,,,,,,,,juvenile,11,8,3,0.136363636,0.53654337,0.390305902,0.047642224,SED,13,7,2
+,,,,2,26,Ambient,,CUxCU,,,76.47058824,Curd,Curd,,,,,,,,,,juvenile,17,13,4,0.117647059,0.469668218,0.295367962,0.04685962,SED,13,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,13,2,3
+,,,,2,26,Ambient,,CUxLS,,,93.33333333,Curd,Long Sandy,,,,,,,,,,juvenile,15,14,1,0.033333333,0.98319208,0.228967246,0.004852708,SED,13,2,3
+,,,,2,26,Ambient,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SED,13,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,13,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,SED,13,3,3
+,,,,2,26,Ambient,,DRxDR,,,72.72727273,Davies,Davies,,,,,,,,,,juvenile,11,8,3,0.136363636,0.53654337,0.390305902,0.047642224,SED,13,3,3
+,,,,2,26,Ambient,,DRxSB,,,87.5,Davies,Sand Bank 7,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,SED,13,3,3
+,,,,2,26,Ambient,,LSxBK,,,27.27272727,Long Sandy,Backnumbers,,,,,,,,,,juvenile,11,3,8,0.363636364,0.282038037,0.632031202,0.209216578,SED,13,4,2
+,,,,2,26,Ambient,,LSxCU,,,93.33333333,Long Sandy,Curd,,,,,,,,,,juvenile,15,14,1,0.033333333,0.98319208,0.228967246,0.004852708,SED,13,3,2
+,,,,2,26,Ambient,,LSxLS,,,75,Long Sandy,Long Sandy,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SED,13,5,6
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,SED,13,5,6
+,,,,2,26,Ambient,,SBxBK,,,0,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,3,0,3,0.5,0.40824829,1,0.224630348,SED,13,3,7
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SED,13,3,4
+,,,,2,26,Ambient,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,13,5,6
+,,,,2,26,Ambient,,BKxBK,,,15.38461538,Backnumbers,Backnumbers,,,,,,,,,,juvenile,13,2,11,0.423076923,0.229014306,0.662760578,0.270073521,SED,14,2,2
+,,,,2,26,Ambient,,BKxCU,,,0,Backnumbers,Curd,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,SED,14,2,7
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SED,14,2,3
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SED,14,2,4
+,,,,2,26,Ambient,,BKxSB,,,50,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SED,14,7,4
+,,,,2,26,Ambient,,CUxBK,,,54.54545455,Curd,Backnumbers,,,,,,,,,,juvenile,11,6,5,0.227272727,0.393122697,0.491104563,0.105176975,SED,14,7,2
+,,,,2,26,Ambient,,CUxCU,,,95.65217391,Curd,Curd,,,,,,,,,,juvenile,23,22,1,0.021276596,0.989304505,0.147910724,0.003060586,SED,14,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SED,14,2,3
+,,,,2,26,Ambient,,CUxLS,,,85.71428571,Curd,Long Sandy,,,,,,,,,,juvenile,7,6,1,0.076923077,0.960768923,0.505667029,0.011701692,SED,14,2,3
+,,,,2,26,Ambient,,DRxBK,,,70,Davies,Backnumbers,,,,,,,,,,juvenile,10,7,3,0.15,0.532290647,0.425772767,0.05284509,SED,14,3,2
+,,,,2,26,Ambient,,DRxDR,,,96.42857143,Davies,Davies,,,,,,,,,,juvenile,28,27,1,0.017857143,0.991031209,0.124560192,0.002560028,SED,14,3,3
+,,,,2,26,Ambient,,DRxSB,,,75,Davies,Sand Bank 7,,,,,,,,,,juvenile,12,9,3,0.125,0.540061725,0.360256136,0.043371919,SED,14,3,3
+,,,,2,26,Ambient,,LSxBK,,,88.88888889,Long Sandy,Backnumbers,,,,,,,,,,juvenile,27,24,3,0.054545455,0.561383572,0.163911388,0.018151311,SED,14,4,2
+,,,,2,26,Ambient,,LSxCU,,,87.5,Long Sandy,Curd,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,SED,14,3,2
+,,,,2,26,Ambient,,LSxLS,,,91.66666667,Long Sandy,Long Sandy,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,SED,14,5,6
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,SED,14,5,6
+,,,,2,26,Ambient,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SED,14,3,7
+,,,,2,26,Ambient,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,14,3,3
+,,,,2,26,Ambient,,SBxLS,,,90,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,10,9,1,0.05,0.974679434,0.33776811,0.007401528,SED,14,3,4
+,,,,2,26,Ambient,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SED,14,5,6
+,,,,2,26,Ambient,,BKxCU,,,0,Backnumbers,Curd,,,,,,,,,,juvenile,4,0,4,0.5,0.353553391,0.999804751,0.250048822,SED,15,2,7
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,15,2,3
+,,,,2,26,Ambient,,BKxLS,,,0,Backnumbers,Long Sandy,,,,,,,,,,juvenile,3,0,3,0.5,0.40824829,1,0.224630348,SED,15,2,4
+,,,,2,26,Ambient,,BKxSB,,,87.5,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,SED,15,7,4
+,,,,2,26,Ambient,,CUxBK,,,37.5,Curd,Backnumbers,,,,,,,,,,juvenile,8,3,5,0.3125,0.370809924,0.646374183,0.151083154,SED,15,7,2
+,,,,2,26,Ambient,,CUxCU,,,92.85714286,Curd,Curd,,,,,,,,,,juvenile,14,13,1,0.035714286,0.981980506,0.244740189,0.005211691,SED,15,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SED,15,2,3
+,,,,2,26,Ambient,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,21,21,0,0,Inf,NA,NA,SED,15,2,3
+,,,,2,26,Ambient,,CUxSB,,,0,Curd,Sand Bank 7,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,SED,15,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,SED,15,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SED,15,3,3
+,,,,2,26,Ambient,,DRxDR,,,88.57142857,Davies,Davies,,,,,,,,,,juvenile,35,31,4,0.057142857,0.485504156,0.147987093,0.022064804,SED,15,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,15,3,3
+,,,,2,26,Ambient,,LSxBK,,,29.41176471,Long Sandy,Backnumbers,,,,,,,,,,juvenile,17,5,12,0.352941176,0.232210182,0.556365247,0.223895139,SED,15,4,2
+,,,,2,26,Ambient,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,SED,15,3,2
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SED,15,5,6
+,,,,2,26,Ambient,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SED,15,3,7
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,15,3,4
+,,,,2,26,Ambient,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,17,17,0,0,Inf,NA,NA,SED,15,5,6
+,,,,2,32,Hot,,BKxBK,,,100,Backnumbers,Backnumbers,,,,,,,,,,juvenile,14,14,0,0,Inf,NA,NA,SED,16,2,2
+,,,,2,32,Hot,,BKxCU,,,50,Backnumbers,Curd,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SED,16,2,7
+,,,,2,32,Hot,,BKxDR,,,0,Backnumbers,Davies,,,,,,,,,,juvenile,6,0,6,0.5,0.288675135,0.880421672,0.283954846,SED,16,2,3
+,,,,2,32,Hot,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,16,2,4
+,,,,2,32,Hot,,CUxBK,,,55.55555556,Curd,Backnumbers,,,,,,,,,,juvenile,18,10,8,0.222222222,0.311804782,0.40944559,0.120608738,SED,16,7,2
+,,,,2,32,Hot,,CUxCU,,,63.63636364,Curd,Curd,,,,,,,,,,juvenile,11,7,4,0.181818182,0.452267017,0.441171748,0.074931932,SED,16,6,5
+,,,,2,32,Hot,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,16,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SED,16,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SED,16,2,5
+,,,,2,32,Hot,,DRxBK,,,75,Davies,Backnumbers,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SED,16,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,16,3,3
+,,,,2,32,Hot,,DRxDR,,,91.66666667,Davies,Davies,,,,,,,,,,juvenile,12,11,1,0.041666667,0.97894501,0.283836512,0.006116588,SED,16,3,3
+,,,,2,32,Hot,,DRxSB,,,83.33333333,Davies,Sand Bank 7,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,SED,16,3,3
+,,,,2,32,Hot,,LSxBK,,,48.38709677,Long Sandy,Backnumbers,,,,,,,,,,juvenile,31,15,16,0.258064516,0.215339192,0.393573044,0.169212032,SED,16,4,2
+,,,,2,32,Hot,,LSxCU,,,75,Long Sandy,Curd,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SED,16,3,2
+,,,,2,32,Hot,,LSxLS,,,80,Long Sandy,Long Sandy,,,,,,,,,,juvenile,10,8,2,0.1,0.670820393,0.372394582,0.026853237,SED,16,5,6
+,,,,2,32,Hot,,LSxSB,,,50,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SED,16,5,6
+,,,,2,32,Hot,,SBxBK,,,75,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SED,16,3,7
+,,,,2,32,Hot,,SBxDR,,,50,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SED,16,3,3
+,,,,2,32,Hot,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,16,3,4
+,,,,2,32,Hot,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,17,17,0,0,Inf,NA,NA,SED,16,5,6
+,,,,2,32,Hot,,BKxBK,,,68.75,Backnumbers,Backnumbers,,,,,,,,,,juvenile,16,11,5,0.15625,0.410791918,0.349531838,0.069847893,SED,17,2,2
+,,,,2,32,Hot,,BKxDR,,,50,Backnumbers,Davies,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,SED,17,2,3
+,,,,2,32,Hot,,BKxLS,,,40,Backnumbers,Long Sandy,,,,,,,,,,juvenile,5,2,3,0.3,0.483045892,0.773197895,0.116399696,SED,17,2,4
+,,,,2,32,Hot,,BKxSB,,,0,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,SED,17,7,4
+,,,,2,32,Hot,,CUxBK,,,36.36363636,Curd,Backnumbers,,,,,,,,,,juvenile,22,8,14,0.318181818,0.220683707,0.490367492,0.206456731,SED,17,7,2
+,,,,2,32,Hot,,CUxCU,,,70,Curd,Curd,,,,,,,,,,juvenile,20,14,6,0.15,0.376386326,0.313669203,0.07173162,SED,17,6,5
+,,,,2,32,Hot,,CUxDR,,,0,Curd,Davies,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,SED,17,2,3
+,,,,2,32,Hot,,CUxLS,,,71.42857143,Curd,Long Sandy,,,,,,,,,,juvenile,7,5,2,0.142857143,0.654653671,0.515399716,0.039596769,SED,17,2,3
+,,,,2,32,Hot,,DRxBK,,,94.11764706,Davies,Backnumbers,,,,,,,,,,juvenile,17,16,1,0.029411765,0.985184366,0.202820354,0.004265114,SED,17,3,2
+,,,,2,32,Hot,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,17,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,17,3,3
+,,,,2,32,Hot,,DRxDR,,,68.75,Davies,Davies,,,,,,,,,,juvenile,16,11,5,0.15625,0.410791918,0.349531838,0.069847893,SED,17,3,3
+,,,,2,32,Hot,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,SED,17,3,2
+,,,,2,32,Hot,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,17,5,6
+,,,,2,32,Hot,,SBxBK,,,83.33333333,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,SED,17,3,7
+,,,,2,32,Hot,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SED,17,3,3
+,,,,2,32,Hot,,SBxLS,,,66.66666667,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,6,4,2,0.166666667,0.645497224,0.590604815,0.047032766,SED,17,3,4
+,,,,2,32,Hot,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,12,12,0,0,Inf,NA,NA,SED,17,5,6
+,,,,2,32,Hot,,BKxBK,,,66.66666667,Backnumbers,Backnumbers,,,,,,,,,,juvenile,12,8,4,0.166666667,0.456435465,0.407724981,0.068128712,SED,18,2,2
+,,,,2,32,Hot,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SED,18,2,3
+,,,,2,32,Hot,,BKxSB,,,50,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,8,4,4,0.222222222,0.440958552,0.527390237,0.093636007,SED,18,7,4
+,,,,2,32,Hot,,CUxCU,,,92,Curd,Curd,,,,,,,,,,juvenile,25,23,2,0.04,0.692820323,0.155521243,0.010287984,SED,18,6,5
+,,,,2,32,Hot,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SED,18,2,3
+,,,,2,32,Hot,,CUxLS,,,87.5,Curd,Long Sandy,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,SED,18,2,3
+,,,,2,32,Hot,,CUxSB,,,87.5,Curd,Sand Bank 7,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,SED,18,2,5
+,,,,2,32,Hot,,DRxBK,,,83.33333333,Davies,Backnumbers,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,SED,18,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SED,18,3,3
+,,,,2,32,Hot,,DRxDR,,,87.5,Davies,Davies,,,,,,,,,,juvenile,24,21,3,0.0625,0.559016994,0.186945986,0.020895073,SED,18,3,3
+,,,,2,32,Hot,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SED,18,3,3
+,,,,2,32,Hot,,LSxBK,,,64,Long Sandy,Backnumbers,,,,,,,,,,juvenile,25,16,9,0.18,0.301846171,0.325240359,0.099618633,SED,18,4,2
+,,,,2,32,Hot,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,12,12,0,0,Inf,NA,NA,SED,18,3,2
+,,,,2,32,Hot,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,15,15,0,0,Inf,NA,NA,SED,18,5,6
+,,,,2,32,Hot,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,SED,18,5,6
+,,,,2,32,Hot,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SED,18,3,7
+,,,,2,32,Hot,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SED,18,3,3
+,,,,2,32,Hot,,SBxLS,,,50,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SED,18,3,4
+,,,,2,32,Hot,,SBxSB,,,96.875,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,32,31,1,0.015625,0.992156742,0.109230866,0.002235088,SED,18,5,6
+,,,,2,26,Ambient,,BKxBK,,,77.77777778,Backnumbers,Backnumbers,,,,,,,,,,juvenile,9,7,2,0.111111111,0.666666667,0.410416853,0.030080829,SS,7,2,2
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SS,7,2,3
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,7,2,4
+,,,,2,26,Ambient,,BKxSB,,,100,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,7,7,4
+,,,,2,26,Ambient,,CUxBK,,,16.66666667,Curd,Backnumbers,,,,,,,,,,juvenile,12,2,10,0.416666667,0.241522946,0.668918893,0.259539853,SS,7,7,2
+,,,,2,26,Ambient,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,7,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,7,2,3
+,,,,2,26,Ambient,,CUxLS,,,87.5,Curd,Long Sandy,,,,,,,,,,juvenile,8,7,1,0.0625,0.968245837,0.416919653,0.009369311,SS,7,2,3
+,,,,2,26,Ambient,,CUxSB,,,40,Curd,Sand Bank 7,,,,,,,,,,juvenile,5,2,3,0.3,0.483045892,0.773197895,0.116399696,SS,7,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,SS,7,3,2
+,,,,2,26,Ambient,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,7,3,3
+,,,,2,26,Ambient,,DRxDR,,,90.47619048,Davies,Davies,,,,,,,,,,juvenile,21,19,2,0.047619048,0.690065559,0.184147393,0.012313906,SS,7,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,7,3,3
+,,,,2,26,Ambient,,LSxBK,,,100,Long Sandy,Backnumbers,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,7,4,2
+,,,,2,26,Ambient,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,SS,7,3,2
+,,,,2,26,Ambient,,LSxLS,,,83.33333333,Long Sandy,Long Sandy,,,,,,,,,,juvenile,12,10,2,0.083333333,0.6770032,0.314112286,0.022108159,SS,7,5,6
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,7,5,6
+,,,,2,26,Ambient,,SBxBK,,,0,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,SS,7,3,7
+,,,,2,26,Ambient,,SBxDR,,,50,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SS,7,3,3
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,7,3,4
+,,,,2,26,Ambient,,SBxSB,,,85.71428571,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,7,6,1,0.071428571,0.963624112,0.472182944,0.01080522,SS,7,5,6
+,,,,2,26,Ambient,,BKxBK,,,0,Backnumbers,Backnumbers,,,,,,,,,,juvenile,5,0,5,0.5,0.316227766,0.92927353,0.269027355,SS,8,2,2
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,8,2,4
+,,,,2,26,Ambient,,BKxSB,,,80,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,SS,8,7,4
+,,,,2,26,Ambient,,CUxBK,,,21.42857143,Curd,Backnumbers,,,,,,,,,,juvenile,14,3,11,0.392857143,0.234935747,0.622604599,0.247888845,SS,8,7,2
+,,,,2,26,Ambient,,CUxCU,,,80,Curd,Curd,,,,,,,,,,juvenile,5,4,1,0.1,0.948683298,0.641978801,0.015576838,SS,8,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,SS,8,2,3
+,,,,2,26,Ambient,,CUxLS,,,94.73684211,Curd,Long Sandy,,,,,,,,,,juvenile,19,18,1,0.026315789,0.986754382,0.18203012,0.00380443,SS,8,2,3
+,,,,2,26,Ambient,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SS,8,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,SS,8,3,2
+,,,,2,26,Ambient,,DRxCU,,,66.66666667,Davies,Curd,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,SS,8,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SS,8,3,3
+,,,,2,26,Ambient,,LSxBK,,,36,Long Sandy,Backnumbers,,,,,,,,,,juvenile,25,9,16,0.32,0.206155281,0.479324549,0.213633957,SS,8,4,2
+,,,,2,26,Ambient,,LSxCU,,,92.30769231,Long Sandy,Curd,,,,,,,,,,juvenile,13,12,1,0.038461538,0.980580676,0.262844223,0.00562801,SS,8,3,2
+,,,,2,26,Ambient,,LSxLS,,,50,Long Sandy,Long Sandy,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,SS,8,5,6
+,,,,2,26,Ambient,,LSxSB,,,66.66666667,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,SS,8,5,6
+,,,,2,26,Ambient,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,8,3,7
+,,,,2,26,Ambient,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,8,3,3
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,8,3,4
+,,,,2,26,Ambient,,SBxSB,,,100,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,8,5,6
+,,,,2,26,Ambient,,BKxBK,,,90.47619048,Backnumbers,Backnumbers,,,,,,,,,,juvenile,21,19,2,0.047619048,0.690065559,0.184147393,0.012313906,SS,9,2,2
+,,,,2,26,Ambient,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,9,2,3
+,,,,2,26,Ambient,,BKxLS,,,100,Backnumbers,Long Sandy,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,9,2,4
+,,,,2,26,Ambient,,CUxBK,,,23.07692308,Curd,Backnumbers,,,,,,,,,,juvenile,13,3,10,0.384615385,0.248069469,0.625437284,0.236520908,SS,9,7,2
+,,,,2,26,Ambient,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,SS,9,6,5
+,,,,2,26,Ambient,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,SS,9,2,3
+,,,,2,26,Ambient,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,SS,9,2,3
+,,,,2,26,Ambient,,CUxSB,,,60,Curd,Sand Bank 7,,,,,,,,,,juvenile,5,3,2,0.2,0.632455532,0.690839435,0.057900574,SS,9,2,5
+,,,,2,26,Ambient,,DRxBK,,,100,Davies,Backnumbers,,,,,,,,,,juvenile,11,11,0,0,Inf,NA,NA,SS,9,3,2
+,,,,2,26,Ambient,,DRxCU,,,33.33333333,Davies,Curd,,,,,,,,,,juvenile,3,1,2,0.333333333,0.577350269,1,0.107507139,SS,9,3,3
+,,,,2,26,Ambient,,DRxDR,,,100,Davies,Davies,,,,,,,,,,juvenile,8,8,0,0,Inf,NA,NA,SS,9,3,3
+,,,,2,26,Ambient,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,SS,9,3,3
+,,,,2,26,Ambient,,LSxBK,,,60.52631579,Long Sandy,Backnumbers,,,,,,,,,,juvenile,38,23,15,0.197368421,0.231319632,0.310582724,0.125423247,SS,9,4,2
+,,,,2,26,Ambient,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SS,9,3,2
+,,,,2,26,Ambient,,LSxLS,,,93.75,Long Sandy,Long Sandy,,,,,,,,,,juvenile,16,15,1,0.03125,0.984250984,0.215102758,0.004539981,SS,9,5,6
+,,,,2,26,Ambient,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,12,12,0,0,Inf,NA,NA,SS,9,5,6
+,,,,2,26,Ambient,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,9,3,7
+,,,,2,26,Ambient,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,15,15,0,0,Inf,NA,NA,SS,9,3,4
+,,,,2,26,Ambient,,SBxSB,,,90.90909091,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,11,10,1,0.045454545,0.977008421,0.308466776,0.006698017,SS,9,5,6
+,,,,2,32,Hot,,BKxBK,,,94.11764706,Backnumbers,Backnumbers,,,,,,,,,,juvenile,17,16,1,0.029411765,0.985184366,0.202820354,0.004265114,SS,10,2,2
+,,,,2,32,Hot,,BKxCU,,,100,Backnumbers,Curd,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,10,2,7
+,,,,2,32,Hot,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,10,2,3
+,,,,2,32,Hot,,BKxSB,,,0,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,SS,10,7,4
+,,,,2,32,Hot,,CUxBK,,,0,Curd,Backnumbers,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,SS,10,7,2
+,,,,2,32,Hot,,CUxCU,,,100,Curd,Curd,,,,,,,,,,juvenile,18,18,0,0,Inf,NA,NA,SS,10,6,5
+,,,,2,32,Hot,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,17,17,0,0,Inf,NA,NA,SS,10,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,9,9,0,0,Inf,NA,NA,SS,10,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,1,1,0,0,Inf,NA,NA,SS,10,2,5
+,,,,2,32,Hot,,DRxBK,,,88.88888889,Davies,Backnumbers,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,SS,10,3,2
+,,,,2,32,Hot,,DRxCU,,,75,Davies,Curd,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SS,10,3,3
+,,,,2,32,Hot,,DRxDR,,,85.71428571,Davies,Davies,,,,,,,,,,juvenile,14,12,2,0.071428571,0.681385144,0.271561407,0.018787798,SS,10,3,3
+,,,,2,32,Hot,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,12,12,0,0,Inf,NA,NA,SS,10,3,3
+,,,,2,32,Hot,,LSxBK,,,100,Long Sandy,Backnumbers,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SS,10,4,2
+,,,,2,32,Hot,,LSxCU,,,94.44444444,Long Sandy,Curd,,,,,,,,,,juvenile,18,17,1,0.027777778,0.986013297,0.19186402,0.004021624,SS,10,3,2
+,,,,2,32,Hot,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,10,10,0,0,Inf,NA,NA,SS,10,5,6
+,,,,2,32,Hot,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,13,13,0,0,Inf,NA,NA,SS,10,5,6
+,,,,2,32,Hot,,SBxBK,,,100,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,5,5,0,0,Inf,NA,NA,SS,10,3,7
+,,,,2,32,Hot,,SBxDR,,,100,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,10,3,3
+,,,,2,32,Hot,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,10,3,4
+,,,,2,32,Hot,,SBxSB,,,87.5,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,16,14,2,0.0625,0.684653197,0.239143111,0.016334361,SS,10,5,6
+,,,,2,32,Hot,,BKxBK,,,66.66666667,Backnumbers,Backnumbers,,,,,,,,,,juvenile,18,12,6,0.166666667,0.372677996,0.3459974,0.080283198,SS,11,2,2
+,,,,2,32,Hot,,BKxCU,,,60,Backnumbers,Curd,,,,,,,,,,juvenile,10,6,4,0.2,0.447213595,0.480506092,0.083245563,SS,11,2,7
+,,,,2,32,Hot,,BKxSB,,,16.66666667,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,6,1,5,0.416666667,0.341565026,0.813822017,0.213328108,SS,11,7,4
+,,,,2,32,Hot,,CUxBK,,,0,Curd,Backnumbers,,,,,,,,,,juvenile,17,0,17,0.5,0.171498585,0.69976121,0.35726473,SS,11,7,2
+,,,,2,32,Hot,,CUxCU,,,93.33333333,Curd,Curd,,,,,,,,,,juvenile,15,14,1,0.033333333,0.98319208,0.228967246,0.004852708,SS,11,6,5
+,,,,2,32,Hot,,CUxDR,,,50,Curd,Davies,,,,,,,,,,juvenile,4,2,2,0.25,0.612372436,0.830218432,0.075281393,SS,11,2,3
+,,,,2,32,Hot,,CUxLS,,,76.92307692,Curd,Long Sandy,,,,,,,,,,juvenile,13,10,3,0.115384615,0.543020989,0.334478503,0.039804081,SS,11,2,3
+,,,,2,32,Hot,,CUxSB,,,88.88888889,Curd,Sand Bank 7,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,SS,11,2,5
+,,,,2,32,Hot,,DRxBK,,,75,Davies,Backnumbers,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SS,11,3,2
+,,,,2,32,Hot,,DRxCU,,,100,Davies,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SS,11,3,3
+,,,,2,32,Hot,,DRxDR,,,57.14285714,Davies,Davies,,,,,,,,,,juvenile,14,8,6,0.214285714,0.361873432,0.435532374,0.105430434,SS,11,3,3
+,,,,2,32,Hot,,DRxSB,,,100,Davies,Sand Bank 7,,,,,,,,,,juvenile,11,11,0,0,Inf,NA,NA,SS,11,3,3
+,,,,2,32,Hot,,LSxBK,,,60,Long Sandy,Backnumbers,,,,,,,,,,juvenile,30,18,12,0.2,0.25819889,0.331748745,0.120573176,SS,11,4,2
+,,,,2,32,Hot,,LSxCU,,,75,Long Sandy,Curd,,,,,,,,,,juvenile,8,6,2,0.125,0.661437828,0.457011273,0.034189529,SS,11,3,2
+,,,,2,32,Hot,,LSxLS,,,75,Long Sandy,Long Sandy,,,,,,,,,,juvenile,4,3,1,0.125,0.935414347,0.781872878,0.019984067,SS,11,5,6
+,,,,2,32,Hot,,LSxSB,,,80,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,10,8,2,0.1,0.670820393,0.372394582,0.026853237,SS,11,5,6
+,,,,2,32,Hot,,SBxBK,,,66.66666667,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,3,2,1,0.166666667,0.912870929,0.997437962,0.027849128,SS,11,3,7
+,,,,2,32,Hot,,SBxDR,,,50,Sand Bank 7,Davies,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SS,11,3,3
+,,,,2,32,Hot,,SBxLS,,,100,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SS,11,3,4
+,,,,2,32,Hot,,SBxSB,,,95,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,20,19,1,0.025,0.987420883,0.173154662,0.00360949,SS,11,5,6
+,,,,2,32,Hot,,BKxBK,,,100,Backnumbers,Backnumbers,,,,,,,,,,juvenile,7,7,0,0,Inf,NA,NA,SS,12,2,2
+,,,,2,32,Hot,,BKxDR,,,100,Backnumbers,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,12,2,3
+,,,,2,32,Hot,,BKxSB,,,0,Backnumbers,Sand Bank 7,,,,,,,,,,juvenile,3,0,3,0.5,0.40824829,1,0.224630348,SS,12,7,4
+,,,,2,32,Hot,,CUxBK,,,0,Curd,Backnumbers,,,,,,,,,,juvenile,2,0,2,0.5,0.5,1,0.187658929,SS,12,7,2
+,,,,2,32,Hot,,CUxCU,,,57.14285714,Curd,Curd,,,,,,,,,,juvenile,14,8,6,0.214285714,0.361873432,0.435532374,0.105430434,SS,12,6,5
+,,,,2,32,Hot,,CUxDR,,,100,Curd,Davies,,,,,,,,,,juvenile,3,3,0,0,Inf,NA,NA,SS,12,2,3
+,,,,2,32,Hot,,CUxLS,,,100,Curd,Long Sandy,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SS,12,2,3
+,,,,2,32,Hot,,CUxSB,,,100,Curd,Sand Bank 7,,,,,,,,,,juvenile,6,6,0,0,Inf,NA,NA,SS,12,2,5
+,,,,2,32,Hot,,DRxBK,,,88.88888889,Davies,Backnumbers,,,,,,,,,,juvenile,9,8,1,0.055555556,0.971825316,0.373204355,0.008270053,SS,12,3,2
+,,,,2,32,Hot,,DRxCU,,,50,Davies,Curd,,,,,,,,,,juvenile,2,1,1,0.25,0.866025404,1,0.04579076,SS,12,3,3
+,,,,2,32,Hot,,DRxDR,,,100,Davies,Davies,,,,,,,,,,juvenile,2,2,0,0,Inf,NA,NA,SS,12,3,3
+,,,,2,32,Hot,,DRxSB,,,90.90909091,Davies,Sand Bank 7,,,,,,,,,,juvenile,11,10,1,0.045454545,0.977008421,0.308466776,0.006698017,SS,12,3,3
+,,,,2,32,Hot,,LSxCU,,,100,Long Sandy,Curd,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SS,12,3,2
+,,,,2,32,Hot,,LSxLS,,,100,Long Sandy,Long Sandy,,,,,,,,,,juvenile,14,14,0,0,Inf,NA,NA,SS,12,5,6
+,,,,2,32,Hot,,LSxSB,,,100,Long Sandy,Sand Bank 7,,,,,,,,,,juvenile,4,4,0,0,Inf,NA,NA,SS,12,5,6
+,,,,2,32,Hot,,SBxBK,,,50,Sand Bank 7,Backnumbers,,,,,,,,,,juvenile,6,3,3,0.25,0.5,0.666102065,0.093829464,SS,12,3,7
+,,,,2,32,Hot,,SBxDR,,,0,Sand Bank 7,Davies,,,,,,,,,,juvenile,1,0,1,0.5,0.707106781,1,0.125048827,SS,12,3,3
+,,,,2,32,Hot,,SBxLS,,,83.33333333,Sand Bank 7,Long Sandy,,,,,,,,,,juvenile,6,5,1,0.083333333,0.957427108,0.544229634,0.012760137,SS,12,3,4
+,,,,2,32,Hot,,SBxSB,,,68.96551724,Sand Bank 7,Sand Bank 7,,,,,,,,,,juvenile,29,20,9,0.155172414,0.306381677,0.282883145,0.085118108,SS,12,5,6
