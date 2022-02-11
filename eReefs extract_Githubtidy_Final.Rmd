@@ -1,0 +1,650 @@
+---
+title: "eReefs Extracts"
+author: "Kate Quigley"
+date: "11/11/2019"
+output: html_document
+---
+
+
+
+#Download pre data
+```{r install package, include=FALSE}
+
+library(ereefs)
+library(ncdf4)
+
+########################################################################################################################
+#Note: the ereefs package creater has told me this is undergoing some updates. If the function get_ereefs_ts does not work for you during the time you are downloading it, please contact the package creator or use the weblink below in the section: r eReefs extractor tool
+
+#change to 5
+#(input_file=6)” for the latest-release GBR1 hydrodynamic model run.test3<-get_ereefs_ts(input_file=6)
+#http://data.aims.ereefs.org.au/thredds/catalog/mirror-download/gbr1_2.0/catalog.html
+Backnumbers<-get_ereefs_ts(var_names = c("temp"),
+                     location_latlon = c(-18.507467, 147.146435), 
+                     start_date = c(2014, 12, 01), end_date = c(2016, 10, 31),
+                     input_file=5)
+
+Backnumbers<-get_ereefs_ts(var_names = c("temp"),
+                     location_latlon = c(-18.507467, 147.146435), 
+                     start_date = c(2014, 12, 01), end_date = c(2016, 10, 31))
+Backnumbers$Reef<- ("Backnumbers")
+
+Davies<-get_ereefs_ts(var_names = c("temp"),
+                     location_latlon = c(-18.821744, 147.649492), 
+                     start_date = c(2014, 12, 01), end_date = c(2016, 10, 31),
+                     input_file=6)
+Davies$Reef<- ("Davies")
+
+SandBank7<-get_ereefs_ts(var_names = c("temp"),
+                     location_latlon = c(-13.4362,143.9714), 
+                     start_date = c(2014, 12, 01), end_date = c(2016, 10, 31),
+                     input_file=6)
+SandBank7$Reef<- ("Sand Bank 7")
+
+LongSandy<-get_ereefs_ts(var_names = c("temp"),
+                     location_latlon = c(-12.50029,143.78481), 
+                     start_date = c(2014, 12, 01), end_date = c(2016, 10, 31),
+                     input_file=6)
+LongSandy$Reef<- ("Long Sandy")
+
+Curd<-get_ereefs_ts(var_names = c("temp"),
+                     location_latlon = c(-12.58499, 143.51148), 
+                     start_date = c(2014, 12, 01), end_date = c(2016, 10, 31),
+                     input_file=6)
+Curd$Reef<- ("Curd")
+
+
+eReefdata<-dplyr::bind_rows(Curd, LongSandy, SandBank7, Davies, Backnumbers)
+eReefdata.SE<-summarySE(eReefdata, measurevar="ts_frame...2.dim.ts_frame..2...x.", groupvars=c("Reef"), na.rm=TRUE)
+
+```
+
+
+#Figure for ts_ and sd.y--- done
+```{Figure for ts_, echo=TRUE}
+
+ts_4fig<-eReefdata %>% filter(Reef %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "Sand Bank 7"))  %>% arrange(ts_frame...2.dim.ts_frame..2...x.) %>% mutate(Reef = factor(Reef, levels=c("Long Sandy", "Curd", "Sand Bank 7", "Davies", "Backnumbers")))
+
+ts_Figure<-ggplot(ts_4fig, aes(x=Reef, y=ts_frame...2.dim.ts_frame..2...x., color=Reef)) + geom_boxplot(width=0.1, color="black")+
+  geom_violin(aes(fill=Reef,alpha=3))+
+  theme_bw()+theme_bw()+
+  labs(x="eReefs All year 2014- 2016 SST")+#geom_point(color="black")+
+  scale_colour_manual(values=c("Long Sandy"="#F6CCA0","Curd"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+
+  stat_summary(fun.y=mean, geom="point", shape=23, size=5, fill="black")+
+  scale_fill_manual(values=c("Long Sandy"="#F6CCA0","Curd"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))
+  
+my_comparisions.reefs<-list( c("Davies", "Backnumbers"), c("Davies", "Sand Bank 7"), c("Davies", "Sand Bank 7"),
+                                         c("Davies", "Long Sandy"),
+                                         c("Davies", "Curd"),
+                                         c("Backnumbers", "Sand Bank 7"),
+                                         c("Backnumbers", "Long Sandy"),
+                                         c("Backnumbers", "Curd"),
+                                         c("Sand Bank 7", "Long Sandy"),
+                                         c("Sand Bank 7", "Curd"),
+                                         c("Long Sandy", "Curd"))
+ts_4fig %>%
+  ggboxplot(y = "ts_frame...2.dim.ts_frame..2...x.", x = "Reef",group="Reef",
+            add = "jitter") +stat_compare_means(comparisons=my_comparisions.reefs, method = "wilcox.test",aes(label=..p.adj..))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))
+
+
+##sd.y
+sd.y4fig<-eReefdata.SE %>% arrange(sd) %>% mutate(Reef = factor(Reef, levels=c("Long Sandy", "Curd", "Sand Bank 7", "Davies", "Backnumbers")))
+
+sd.y_Figure<-ggplot(sd.y4fig, aes(x=Reef, y=sd, color=Reef, fill=Reef)) + 
+  geom_point(size=5)+theme_bw()+
+  labs(x="Reef", y=expression("sd.y of ts_"*~degree*C))+#geom_point(color="black")+
+  scale_colour_manual(values=c("Long Sandy"="#F6CCA0","Curd"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+scale_fill_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+ylim(1.7,2.2)
+
+#break up data by year
+eReefdata$date2<-eReefdata$date
+eReefdata_yrSE<-colsplit(eReefdata$date2, '-', names =  c('year','date'))
+eReefdata_yrSE<-cbind(eReefdata, eReefdata_yrSE)
+
+eReefdata.SE_byyear<-summarySE(eReefdata_yrSE, measurevar="ts_frame...2.dim.ts_frame..2...x.", groupvars=c("Reef", "year"), na.rm=TRUE)
+
+eReefdata.SE_byyear$Reef<-factor(eReefdata.SE_byyear$Reef, levels=c("Long Sandy", "Curd", "Sand Bank 7", "Davies", "Backnumbers"))
+my_comparisions.reefs<-list( c("Davies", "Backnumbers"), c("Davies", "Sand Bank 7"), c("Davies", "Sand Bank 7"),
+                                         c("Davies", "Long Sandy"),
+                                         c("Davies", "Curd"),
+                                         c("Backnumbers", "Sand Bank 7"),
+                                         c("Backnumbers", "Long Sandy"),
+                                         c("Backnumbers", "Curd"),
+                                         c("Sand Bank 7", "Long Sandy"),
+                                         c("Sand Bank 7", "Curd"),
+                                         c("Long Sandy", "Curd"))
+sd.y_Figure.postreview<-eReefdata.SE_byyear %>%
+  ggboxplot(y = "sd", x = "Reef",group="year",
+            add = "jitter") + 
+  geom_point(aes(x="Long Sandy", y=1.720918), colour="#F6CCA0", size=5) + 
+  geom_point(aes(x="Sand Bank 7", y=1.820736), colour="#616594", size=5) +
+  geom_point(aes(x="Backnumbers", y=2.039739), colour="#0E0A0E", size=5) +
+  geom_point(aes(x="Davies", y=2.057467), colour="#55C1E2", size=5) +
+  geom_point(aes(x="Curd", y=2.149958), colour="#BB8996", size=5)+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("sd.y of ts_"*~degree*C))
+
+#stats here Wilcoxin
+eReefdata.SE_byyear %>%
+  ggboxplot(y = "sd", x = "Reef",group="year",
+            add = "jitter") + 
+  geom_point(aes(x="Long Sandy", y=1.720918), colour="#F6CCA0", size=5) + 
+  geom_point(aes(x="Sand Bank 7", y=1.820736), colour="#616594", size=5) +
+  geom_point(aes(x="Backnumbers", y=2.039739), colour="#0E0A0E", size=5) +
+  geom_point(aes(x="Davies", y=2.057467), colour="#55C1E2", size=5) +
+  geom_point(aes(x="Curd", y=2.149958), colour="#BB8996", size=5)+stat_compare_means(comparisons=my_comparisions.reefs, method = "wilcox.test",aes(label=..p.adj..))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("sd.y of ts_"*~degree*C))
+
+
+```
+
+#new eReef extractor tool data
+
+```{r eReefs extractor tool, echo=FALSE}
+#eReefs2014_2020_AGFReefs.csv #too large for Github, email me or download yourself directly from the "eReefs extractor tool" (https://extraction.ereefs.aims.gov.au/) for these reefs listed in map file available from Script 2
+
+Reefs2019<-read.csv("eReefs2014_2020_AGFReefs.csv")
+
+Reefs2019.DATES<-Reefs2019%>% separate(Aggregated.Date.Time, c("Date", "Time"),"T" )%>% separate(Date, c("Year", "Month", "Day"),"-")
+
+```
+
+#new eReef extractor tool figures DTR --done
+```{r eReefs extractor tool, echo=FALSE}
+Reefs2019.DATES$Site.Name<-factor(Reefs2019.DATES$Site.Name, levels=c("Lagoon", "Long Sandy","Curd Reef", "Tijou", "Sand Bank 7", "Backnumbers", "Esk", "Davies", "Keppels"))
+
+DailyTemp2<-summarySE(Reefs2019.DATES, measurevar="mean", groupvars=c("Time", "Site.Name", "Month"), na.rm=TRUE)
+
+DailyTempRanges<-DailyTemp2 %>% arrange(mean) %>% mutate(Site.Name = factor(Site.Name, levels=c("Long Sandy", "Curd Reef", "Sand Bank 7", "Davies", "Backnumbers"))) %>%filter(!is.na(Site.Name)) %>%
+  ggplot(aes(Time, mean, color=Site.Name, group=Site.Name), na.rm=TRUE) +
+  geom_point(na.rm=TRUE)+
+  geom_ribbon(aes(ymin=mean-sd, ymax=mean+sd), alpha = 0.3, na.rm=TRUE)+
+  geom_line(aes(color=Site.Name))+
+  facet_grid(Site.Name~Month)+
+  scale_colour_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+
+  scale_fill_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme_bw()+
+  theme(panel.background = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
+  labs(x="Hourly Daily Temperature Range: eReefs eReefs2014_2020_AGFReefs.csv Reefs2019.DATES", y="mean:: Hourly Daily Temperature Range C")
+
+DailyTempRanges_postReview<-DailyTemp2 %>% arrange(mean) %>% mutate(Site.Name = factor(Site.Name, levels=c("Long Sandy", "Curd Reef", "Sand Bank 7", "Davies", "Backnumbers"))) %>%filter(!is.na(Site.Name)) %>%
+  ggplot(aes(Time, mean, color=Site.Name, group=Site.Name), na.rm=TRUE) +
+  geom_point(na.rm=TRUE)+
+  geom_ribbon(aes(ymin=mean-sd, ymax=mean+sd, fill=Site.Name), alpha = 0.3, na.rm=TRUE)+
+  geom_line(aes(color=Site.Name))+
+  facet_grid(.~Month)+
+  scale_colour_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+
+  scale_fill_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme_bw()+
+  theme(panel.background = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), legend.position = "none")+
+  labs(x="Hourly Daily Temperature Range: eReefs eReefs2014_2020_AGFReefs.csv Reefs2019.DATES", y="mean:: Hourly Daily Temperature Range C")
+
+  
+####################################
+  
+#calculate DTR - daily temperature range
+head(Reefs2019.DATES)
+DTR.max.mean<- aggregate(Reefs2019.DATES$mean, by = list(Reefs2019.DATES$Site.Name, Reefs2019.DATES$Year, Reefs2019.DATES$Month, Reefs2019.DATES$Day), max)
+
+DTR.min.mean<- aggregate(Reefs2019.DATES$mean, by = list(Reefs2019.DATES$Site.Name, Reefs2019.DATES$Year, Reefs2019.DATES$Month, Reefs2019.DATES$Day), min)
+
+DRT.mean.min.max<-dplyr::left_join(DTR.max.mean, DTR.min.mean, by= c("Group.1", "Group.2", "Group.3", "Group.4"))
+
+DRT.mean.min.max_DRT<- dplyr::mutate(DRT.mean.min.max, DRT = x.x - x.y)
+#"Lagoon"="purple", "Long Sandy"="goldenrod1","Curd Reef"="firebrick3", "Tijou"="blue", "Sand Bank 7"="darkorange", "Backnumbers"="grey", "Esk"=, "Davies"="black", "Keppels"="#740058"#
+
+
+DRT.mean.min.max_DRT2<- DRT.mean.min.max_DRT %>% filter(Group.1 %in% c("Long Sandy", "Curd Reef", "Sand Bank 7", "Davies", "Backnumbers")) %>% arrange(DRT) %>% mutate(Group.1 = factor(Group.1, levels=c("Long Sandy", "Curd Reef", "Sand Bank 7", "Davies", "Backnumbers")))
+
+```
+
+#SSTA - done
+```{SSTA_Freq_stdev, echo=FALSE}
+###SSTA_Freq_stdev
+#ftp://ftp.nodc.noaa.gov/pub/data.nodc/cortad/Version6/
+#Sea Surface Temperature Anomaly Frequency: number of times over the www.nodc.noaa.gov/sog/cor tad/Version6/previous 52 weeks that SSTA >= 1 degree C 
+
+SSTA_Freq_STDEV_GBR_csv<-read.table(file="GBRONLYSSTAExport_Output_csv.csv", header=TRUE, sep=",")
+#variable SSTA_FrequencyStandardDeviation calculated over the whole time #period (1982-2019). So it is a single value for each pixel
+
+#Backnumbers
+SSTA_Freq_STDEV_GBR_csv_BK_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 147.1) %>% filter(lon < 147.2)
+SSTA_Freq_STDEV_GBR_csv_BK_latslon<-SSTA_Freq_STDEV_GBR_csv_BK_lats %>% filter(lat < -18.01666) %>% filter(lat > -18.51655)
+SSTA_Freq_STDEV_GBR_csv_BK_latslon["Reef"] <- ("Backnumbers")
+
+SSTA_Freq_STDEV_GBR_csv_SE<-summarySE(SSTA_Freq_STDEV_GBR_csv_BK_latslon, measurevar="SSTA_FrequencyStandardDeviation", groupvars=c("Reef"), na.rm=TRUE)
+dim(SSTA_Freq_STDEV_GBR_csv_BK_latslon) #26
+
+#Davies
+SSTA_Freq_STDEV_GBR_csv_Dv_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 147.628) %>% filter(lon < 147.670)
+SSTA_Freq_STDEV_GBR_csv_Dv_latslon<-SSTA_Freq_STDEV_GBR_csv_Dv_lats %>% filter(lat < -18.01666) %>% filter(lat > -18.51655)
+SSTA_Freq_STDEV_GBR_csv_Dv_latslon["Reef"] <- ("Davies")
+SSTA_Freq_STDEV_GBR_csv_Dv_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_Dv_latslon) #13
+
+#Sandbank7
+SSTA_Freq_STDEV_GBR_csv_SB7_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 143.9625) %>% filter(lon < 143.97)
+SSTA_Freq_STDEV_GBR_csv_SB7_latslon<-SSTA_Freq_STDEV_GBR_csv_SB7_lats %>% filter(lat < -13.43439) %>% filter(lat > -13.47605)
+SSTA_Freq_STDEV_GBR_csv_SB7_latslon["Reef"] <- ("SandBank7")
+SSTA_Freq_STDEV_GBR_csv_SB7_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_SB7_latslon) #2
+
+#LongSandy
+SSTA_Freq_STDEV_GBR_csv_LS_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 143.79) %>% filter(lon < 143.7959)
+SSTA_Freq_STDEV_GBR_csv_LS_latslon<-SSTA_Freq_STDEV_GBR_csv_LS_lats %>% filter(lat < -12.51) %>% filter(lat > -12.6)
+SSTA_Freq_STDEV_GBR_csv_LS_latslon["Reef"] <- ("Long Sandy")
+SSTA_Freq_STDEV_GBR_csv_LS_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_LS_latslon)#2
+
+#Curd
+SSTA_Freq_STDEV_GBR_csv_Cu_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 143.5042) %>% filter(lon < 143.5876)
+SSTA_Freq_STDEV_GBR_csv_Cu_latslon<-SSTA_Freq_STDEV_GBR_csv_Cu_lats %>% filter(lat < -12.55959) %>% filter(lat > -12.56)
+SSTA_Freq_STDEV_GBR_csv_Cu_latslon["Reef"] <- ("Curd")
+SSTA_Freq_STDEV_GBR_csv_Cu_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_Cu_latslon) #3
+
+#Esk
+SSTA_Freq_STDEV_GBR_csv_Es_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 146.54) %>% filter(lon < 146.55)
+SSTA_Freq_STDEV_GBR_csv_Es_latslon<-SSTA_Freq_STDEV_GBR_csv_Es_lats %>% filter(lat < -18.76) %>% filter(lat > -18.77)
+SSTA_Freq_STDEV_GBR_csv_Es_latslon["Reef"] <- ("Esk")
+SSTA_Freq_STDEV_GBR_csv_Es_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_Es_latslon) #1
+
+#Lagoon
+SSTA_Freq_STDEV_GBR_csv_Lg_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 143.7542) %>% filter(lon < 143.7959)
+SSTA_Freq_STDEV_GBR_csv_Lg_latslon<-SSTA_Freq_STDEV_GBR_csv_Lg_lats %>% filter(lat < -12.350) %>% filter(lat > -12.393)
+SSTA_Freq_STDEV_GBR_csv_Lg_latslon["Reef"] <- ("Lagoon")
+SSTA_Freq_STDEV_GBR_csv_Lg_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_Lg_latslon) #4
+
+#Keppels
+SSTA_Freq_STDEV_GBR_csv_Kp_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 150.961) %>% filter(lon < 150.962)
+SSTA_Freq_STDEV_GBR_csv_Kp_latslon<-SSTA_Freq_STDEV_GBR_csv_Kp_lats %>% filter(lat < -23.01) %>% filter(lat > -23.07)
+SSTA_Freq_STDEV_GBR_csv_Kp_latslon["Reef"] <- ("Keppels")
+SSTA_Freq_STDEV_GBR_csv_Kp_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_Kp_latslon) #2
+
+#Tijou
+SSTA_Freq_STDEV_GBR_csv_Tj_lats <-SSTA_Freq_STDEV_GBR_csv %>% filter(lon > 143.9625) %>% filter(lon < 143.963)
+SSTA_Freq_STDEV_GBR_csv_Tj_latslon<-SSTA_Freq_STDEV_GBR_csv_Tj_lats %>% filter(lat < -13.10) %>% filter(lat > -13.185)
+SSTA_Freq_STDEV_GBR_csv_Tj_latslon["Reef"] <- ("Tijou")
+SSTA_Freq_STDEV_GBR_csv_Tj_latslon
+dim(SSTA_Freq_STDEV_GBR_csv_Tj_latslon)#3
+
+SSTA_Freq_STDEV_GBR_csv_Allreefs <- rbind(SSTA_Freq_STDEV_GBR_csv_BK_latslon,              SSTA_Freq_STDEV_GBR_csv_Dv_latslon,SSTA_Freq_STDEV_GBR_csv_SB7_latslon,SSTA_Freq_STDEV_GBR_csv_LS_latslon,SSTA_Freq_STDEV_GBR_csv_Cu_latslon,SSTA_Freq_STDEV_GBR_csv_Es_latslon,SSTA_Freq_STDEV_GBR_csv_Lg_latslon,SSTA_Freq_STDEV_GBR_csv_Kp_latslon, SSTA_Freq_STDEV_GBR_csv_Tj_latslon)
+
+SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe<-summarySE(SSTA_Freq_STDEV_GBR_csv_Allreefs, measurevar="SSTA_FrequencyStandardDeviation", groupvars=c("Reef"), na.rm=TRUE)
+head(SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe) 
+
+````
+
+#Figure for SSTA. done---
+```{Figure for SSTA, echo=TRUE}
+SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe #made above
+SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe_rename<-dplyr::rename(SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe, Mom = Reef)
+SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe_rename 
+
+SSTA4fig.postrev<-SSTA_Freq_STDEV_GBR_csv_Allreefs_SummarySe_rename %>% filter(Mom %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "SandBank7"))  %>% arrange(SSTA_FrequencyStandardDeviation) %>% mutate(Mom = factor(Mom, levels=c("Long Sandy", "Curd", "SandBank7", "Davies", "Backnumbers")))
+SSTA_Figure<-ggplot(SSTA4fig.postrev, aes(x=Mom, y=SSTA_FrequencyStandardDeviation, color=Mom, fill=Mom)) + 
+  geom_point(size=5)+theme_bw()+
+  labs(x="Reef", y=expression("SSTA.Freq.STDEV"*~degree*C))+#geom_point(color="black")+
+  scale_colour_manual(values=c("Long Sandy"="#F6CCA0","Curd"="#BB8996", "SandBank7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+scale_fill_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "SandBank7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))
+
+SSTA_Freq_STDEV_GBR_csv_Allreefs$Reef<-factor(SSTA_Freq_STDEV_GBR_csv_Allreefs$Reef, levels=c("Long Sandy","Curd", "SandBank7", "Davies", "Backnumbers"))
+
+my_comparisions.reefs_newnames<-list( c("Davies", "Backnumbers"), c("Davies", "SandBank7"),
+                                         c("Davies", "Long Sandy"),
+                                         c("Davies", "Curd"),
+                                         c("Backnumbers", "SandBank7"),
+                                         c("Backnumbers", "Long Sandy"),
+                                         c("Backnumbers", "Curd"),
+                                         c("SandBank7", "Long Sandy"),
+                                         c("SandBank7", "Curd"),
+                                         c("Long Sandy", "Curd"))
+
+SSTA_Freq_STDEV_GBR_csv_Allreefs_stats<-SSTA_Freq_STDEV_GBR_csv_Allreefs %>% filter(Reef %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "SandBank7")) %>%
+  ggboxplot(y = "SSTA_FrequencyStandardDeviation", x = "Reef",group="Reef",
+            add = "jitter") + 
+  geom_point(aes(x="Long Sandy", y=6.250000), colour="#F6CCA0", size=5) + 
+  geom_point(aes(x="SandBank7", y=5.450000), colour="#616594", size=5) +
+  geom_point(aes(x="Backnumbers", y=5.783846), colour="#0E0A0E", size=5) +
+  geom_point(aes(x="Davies", y=5.392308), colour="#55C1E2", size=5) +
+  geom_point(aes(x="Curd", y=5.516667), colour="#BB8996", size=5)+stat_compare_means(comparisons=my_comparisions.reefs_newnames, method = "wilcox.test",aes(label=..p.adj..))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("SSTA_Freq_stdev"*~degree*C))
+
+SSTA_Freq_STDEV_GBR_csv_Allreefs_nostats<-SSTA_Freq_STDEV_GBR_csv_Allreefs %>% filter(Reef %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "SandBank7")) %>%
+  ggboxplot(y = "SSTA_FrequencyStandardDeviation", x = "Reef",group="Reef",
+            add = "jitter") + 
+  geom_point(aes(x="Long Sandy", y=6.250000), colour="#F6CCA0", size=5) + 
+  geom_point(aes(x="SandBank7", y=5.450000), colour="#616594", size=5) +
+  geom_point(aes(x="Backnumbers", y=5.783846), colour="#0E0A0E", size=5) +
+  geom_point(aes(x="Davies", y=5.392308), colour="#55C1E2", size=5) +
+  geom_point(aes(x="Curd", y=5.516667), colour="#BB8996", size=5)+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("SSTA_Freq_stdev"*~degree*C))
+
+
+```
+
+#TSA --- - done
+```{TSA, echo=FALSE}
+#ftp://ftp.nodc.noaa.gov/pub/data.nodc/cortad/Version6/
+#Sea Surface Temperature Anomaly Frequency: number of times over the www.nodc.noaa.gov/sog/cor tad/Version6/previous 52 weeks that 
+
+TSA_DHW<- read.table(file="Export_OutputDHW.txt", header=TRUE,sep=",") 
+
+#Backnumbers
+TSA_DHW_GBR_csv_BK_lats <-TSA_DHW %>% filter(lon > 147.1) %>% filter(lon < 147.2)
+TSA_DHW_GBR_csv_BK_latslon<-TSA_DHW_GBR_csv_BK_lats %>% filter(lat < -18.01666) %>% filter(lat > -18.51655)
+TSA_DHW_GBR_csv_BK_latslon["Reef"] <- ("Backnumbers")
+
+#Davies
+TSA_DHW_GBR_csv_Dv_lats <-TSA_DHW %>% filter(lon > 147.628) %>% filter(lon < 147.670)
+TSA_DHW_GBR_csv_Dv_latslon<-TSA_DHW_GBR_csv_Dv_lats %>% filter(lat < -18.01666) %>% filter(lat > -18.51655)
+TSA_DHW_GBR_csv_Dv_latslon["Reef"] <- ("Davies")
+TSA_DHW_GBR_csv_Dv_latslon
+dim(TSA_DHW_GBR_csv_Dv_latslon) #13
+
+#Sandbank7
+TSA_DHW_GBR_csv_SB7_lats <-TSA_DHW %>% filter(lon > 143.9625) %>% filter(lon < 143.97)
+TSA_DHW_GBR_csv_SB7_latslon<-TSA_DHW_GBR_csv_SB7_lats %>% filter(lat < -13.43439) %>% filter(lat > -13.47605)
+TSA_DHW_GBR_csv_SB7_latslon["Reef"] <- ("SandBank7")
+TSA_DHW_GBR_csv_SB7_latslon
+dim(TSA_DHW_GBR_csv_SB7_latslon) #2
+
+#LongSandy
+TSA_DHW_GBR_csv_LS_lats <-TSA_DHW %>% filter(lon > 143.79) %>% filter(lon < 143.7959)
+TSA_DHW_GBR_csv_LS_latslon<-TSA_DHW_GBR_csv_LS_lats %>% filter(lat < -12.51) %>% filter(lat > -12.6)
+TSA_DHW_GBR_csv_LS_latslon["Reef"] <- ("Long Sandy")
+TSA_DHW_GBR_csv_LS_latslon
+dim(TSA_DHW_GBR_csv_LS_latslon)#2
+
+#Curd
+TSA_DHW_GBR_csv_Cu_lats <-TSA_DHW %>% filter(lon > 143.5042) %>% filter(lon < 143.5876)
+TSA_DHW_GBR_csv_Cu_latslon<-TSA_DHW_GBR_csv_Cu_lats %>% filter(lat < -12.55959) %>% filter(lat > -12.56)
+TSA_DHW_GBR_csv_Cu_latslon["Reef"] <- ("Curd")
+TSA_DHW_GBR_csv_Cu_latslon
+dim(TSA_DHW_GBR_csv_Cu_latslon) #3
+
+#Esk
+TSA_DHW_GBR_csv_Es_lats <-TSA_DHW %>% filter(lon > 146.54) %>% filter(lon < 146.55)
+TSA_DHW_GBR_csv_Es_latslon<-TSA_DHW_GBR_csv_Es_lats %>% filter(lat < -18.76) %>% filter(lat > -18.77)
+TSA_DHW_GBR_csv_Es_latslon["Reef"] <- ("Esk")
+TSA_DHW_GBR_csv_Es_latslon
+dim(TSA_DHW_GBR_csv_Es_latslon) #1
+
+#Lagoon
+TSA_DHW_GBR_csv_Lg_lats <-TSA_DHW %>% filter(lon > 143.7542) %>% filter(lon < 143.7959)
+TSA_DHW_GBR_csv_Lg_latslon<-TSA_DHW_GBR_csv_Lg_lats %>% filter(lat < -12.350) %>% filter(lat > -12.393)
+TSA_DHW_GBR_csv_Lg_latslon["Reef"] <- ("Lagoon")
+TSA_DHW_GBR_csv_Lg_latslon
+dim(TSA_DHW_GBR_csv_Lg_latslon) #4
+
+#Keppels
+TSA_DHW_GBR_csv_Kp_lats <-TSA_DHW %>% filter(lon > 150.961) %>% filter(lon < 150.962)
+TSA_DHW_GBR_csv_Kp_latslon<-TSA_DHW_GBR_csv_Kp_lats %>% filter(lat < -23.01) %>% filter(lat > -23.07)
+TSA_DHW_GBR_csv_Kp_latslon["Reef"] <- ("Keppels")
+TSA_DHW_GBR_csv_Kp_latslon
+dim(TSA_DHW_GBR_csv_Kp_latslon) #2
+
+#Tijou
+TSA_DHW_GBR_csv_Tj_lats <-TSA_DHW %>% filter(lon > 143.9625) %>% filter(lon < 143.963)
+TSA_DHW_GBR_csv_Tj_latslon<-TSA_DHW_GBR_csv_Tj_lats %>% filter(lat < -13.10) %>% filter(lat > -13.185)
+TSA_DHW_GBR_csv_Tj_latslon["Reef"] <- ("Tijou")
+TSA_DHW_GBR_csv_Tj_latslon
+dim(TSA_DHW_GBR_csv_Tj_latslon)#3
+
+TSA_DHW_GBR_csv_Allreefs <- rbind(TSA_DHW_GBR_csv_BK_latslon,              TSA_DHW_GBR_csv_Dv_latslon,TSA_DHW_GBR_csv_SB7_latslon,TSA_DHW_GBR_csv_LS_latslon,TSA_DHW_GBR_csv_Cu_latslon,TSA_DHW_GBR_csv_Es_latslon,TSA_DHW_GBR_csv_Lg_latslon,TSA_DHW_GBR_csv_Kp_latslon, TSA_DHW_GBR_csv_Tj_latslon)
+
+TSA_DHW_GBR_csv_Allreefs_SummarySe<-summarySE(TSA_DHW_GBR_csv_Allreefs, measurevar="TSA_DHWStandardDeviation", groupvars=c("Reef"), na.rm=TRUE)
+
+
+````
+
+
+#Figure for TSA--- - done
+```{Figure for TSA, echo=TRUE}
+TSA_DHW_GBR_csv_Allreefs_SummarySe #made above
+TSA_DHW_GBR_csv_Allreefs_SummarySe_rename<-dplyr::rename(TSA_DHW_GBR_csv_Allreefs_SummarySe, Mom = Reef)
+
+TSA4fig<-TSA_DHW_GBR_csv_Allreefs_SummarySe_rename %>% filter(Mom %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "Sand Bank 7"))  %>% arrange(TSA_DHWStandardDeviation) %>% mutate(Mom = factor(Mom, levels=c("Long Sandy", "Curd", "Sand Bank 7", "Davies", "Backnumbers")))
+
+TSA_Figure<-ggplot(TSA4fig, aes(x=Mom, y=TSA_DHWStandardDeviation, color=Mom, fill=Mom)) + 
+  geom_point(size=5)+theme_bw()+
+  labs(x="Reef", y=expression("TSA_DHW_stdev"*~degree*C))+#geom_point(color="black")+
+  scale_colour_manual(values=c("Long Sandy"="#F6CCA0","Curd"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+scale_fill_manual(values=c("Long Sandy"="#F6CCA0","Curd Reef"="#BB8996", "Sand Bank 7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))#+geom_linerange(aes(ymin=TSA_DHWStandardDeviation-se, ymax=TSA_DHWStandardDeviation+se), width=0.2, position=position_dodge(.2))
+
+TSA_DHW_GBR_csv_Allreefs$Reef<-factor(TSA_DHW_GBR_csv_Allreefs$Reef, levels=c("Long Sandy","Curd", "SandBank7", "Davies", "Backnumbers"))
+
+TSA_DHW_GBR_csv_Allreefs_stats<-TSA_DHW_GBR_csv_Allreefs %>% filter(Reef %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "SandBank7")) %>%
+  ggboxplot(y = "TSA_DHWStandardDeviation", x = "Reef",group="Reef",
+            add = "jitter") + 
+  geom_point(aes(x="Long Sandy", y=1.170000), colour="#F6CCA0", size=5) + 
+  geom_point(aes(x="SandBank7", y=1.170000), colour="#616594", size=5) +
+  geom_point(aes(x="Backnumbers", y=1.111538), colour="#0E0A0E", size=5) +
+  geom_point(aes(x="Davies", y=1.270769), colour="#55C1E2", size=5) +
+  geom_point(aes(x="Curd", y=1.226667), colour="#BB8996", size=5)+stat_compare_means(comparisons=my_comparisions.reefs_newnames, method = "wilcox.test",aes(label=..p.adj..))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("TSA_DHWStandardDeviation"*~degree*C))
+
+TSA_DHW_GBR_csv_Allreefs_nostats<-TSA_DHW_GBR_csv_Allreefs %>% filter(Reef %in% c("Backnumbers", "Curd", "Davies", "Long Sandy", "SandBank7")) %>%
+  ggboxplot(y = "TSA_DHWStandardDeviation", x = "Reef",group="Reef",
+            add = "jitter") + 
+  geom_point(aes(x="Long Sandy", y=1.170000), colour="#F6CCA0", size=5) + 
+  geom_point(aes(x="SandBank7", y=1.170000), colour="#616594", size=5) +
+  geom_point(aes(x="Backnumbers", y=1.111538), colour="#0E0A0E", size=5) +
+  geom_point(aes(x="Davies", y=1.270769), colour="#55C1E2", size=5) +
+  geom_point(aes(x="Curd", y=1.226667), colour="#BB8996", size=5)+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("TSA_DHWStandardDeviation"*~degree*C))
+
+```
+
+cortadv6_TSA.nc
+
+#Figure for Temp_Figure -- done
+```{Figure for Temp_Figure}
+#####temperature profiles----
+
+ARCGIS_KQuigley_Satdata_AGF18sites_CSV<-read.csv("ARCGIS_KQuigley_Satdata_AGF18sites_CSVlatlong.csv")
+
+Satdata_AGF18sites<-summarySE(ARCGIS_KQuigley_Satdata_AGF18sites_CSV, measurevar="Temp", groupvars=c("Bleaching", "Month", "Reef", "Lat", "Long"), na.rm=TRUE)
+
+##
+Temp_Figure<-Satdata_AGF18sites %>% arrange(Temp) %>% mutate(Reef = factor(Reef, levels=c("Long sandy", "Curd", "Sand Bank No_7", "Davies", "Backnumbers"))) %>%
+  ggplot(aes(x=Reef, y=Temp, color=Reef)) + geom_boxplot(width=0.1, color="black")+
+  geom_violin(aes(fill=Reef,alpha=3))+
+  theme_bw()+theme_bw()+
+  labs(x="Temp eReefs All year 01/01/2013 – 28/02/2018 SST")+#geom_point(color="black")+
+  scale_colour_manual(values=c("Long sandy"="#F6CCA0","Curd"="#BB8996", "Sand Bank No_7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+
+  stat_summary(fun.y=mean, geom="point", shape=23, size=5, fill="black")+
+  scale_fill_manual(values=c("Long sandy"="#F6CCA0","Curd"="#BB8996", "Sand Bank No_7"="#616594", "Backnumbers"="#0E0A0E", "Davies"="#55C1E2"))
+
+
+my_comparisions.reefs_newnames2<-list( c("Davies", "Backnumbers"), c("Davies", "Sand Bank No_7"),
+                                         c("Davies", "Long sandy"),
+                                         c("Davies", "Curd"),
+                                         c("Backnumbers", "Sand Bank No_7"),
+                                         c("Backnumbers", "Long sandy"),
+                                         c("Backnumbers", "Curd"),
+                                         c("Sand Bank No_7", "Long sandy"),
+                                         c("Sand Bank No_7", "Curd"),
+                                         c("Long sandy", "Curd"))
+Satdata_AGF18sites$Reef<-factor(Satdata_AGF18sites$Reef, levels=c("Long sandy","Curd", "Sand Bank No_7", "Davies", "Backnumbers"))
+
+Temp_Figure_stats<-Satdata_AGF18sites %>% filter(Reef %in% c("Backnumbers", "Curd", "Davies", "Long sandy", "Sand Bank No_7")) %>%
+  ggboxplot(y = "Temp", x = "Reef",group="Reef",
+            add = "jitter")+stat_compare_means(comparisons=my_comparisions.reefs_newnames2, method = "wilcox.test",aes(label=..p.adj..))+
+  theme(panel.grid.minor = element_blank(), axis.line = element_line(size = 0.5, linetype = "solid", colour = "black"))+labs(x="Reef", y=expression("Temp"*~degree*C))
+
+
+```
+
+#Reefs2019.DATES3
+```{r eReefs extractor tool, echo=FALSE}
+Reefs2019.DATES$Status<-Reefs2019.DATES$Year
+
+Reefs2019.DATES2<-Reefs2019.DATES %>%
+  mutate(Status = recode(Status, "2014" = "nonbleach", "2015"= "nonbleach", "2016"= "nonbleach", "2017"= "nonbleach", "2018"= "nonbleach", "2019"="nonbleach", "2020"="nonbleach"))
+
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2015' & Reefs2019.DATES2$Month=='12'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2016' & Reefs2019.DATES2$Month=='01'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2016' & Reefs2019.DATES2$Month=='02'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2016' & Reefs2019.DATES2$Month=='03'] <- "yrbleach"
+
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2016' & Reefs2019.DATES2$Month=='12'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2017' & Reefs2019.DATES2$Month=='01'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2017' & Reefs2019.DATES2$Month=='02'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2017' & Reefs2019.DATES2$Month=='03'] <- "yrbleach"
+
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2019' & Reefs2019.DATES2$Month=='12'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2020' & Reefs2019.DATES2$Month=='01'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2020' & Reefs2019.DATES2$Month=='02'] <- "yrbleach"
+Reefs2019.DATES2$Status2[Reefs2019.DATES2$Year=='2020' & Reefs2019.DATES2$Month=='03'] <- "yrbleach"
+
+Reefs2019.DATES3<-Reefs2019.DATES2 %>% replace_na(list(Status2 = "nonbleach"))
+
+
+Reefs2019.DATES_Month<-summarySE(Reefs2019.DATES3, measurevar="mean", groupvars=c("Year", "Status2", "Month", "Site.Name", "Latitude", "Longitude"), na.rm=TRUE)
+head(Reefs2019.DATES_Month)
+
+Reefs2019.DATES_Month.3hot<- Reefs2019.DATES_Month %>% 
+  dplyr::filter(Month %in% c("12", "01", "02", "03"))
+head(Reefs2019.DATES_Month.3hot)
+
+##Mean SST over the warmest months
+Reefs2019.DATES_Month.3hot_2<-Reefs2019.DATES_Month.3hot
+
+Reefs2019.DATES_Month.3hot_2$Mom <- mapvalues(Reefs2019.DATES_Month.3hot_2$Site.Name, from = c("Curd Reef"), to = c("Curd"))
+
+
+```
+
+
+
+#Figures for environemtnal data---
+```{Patchwork plots, echo=FALSE}
+#Stacking, packing, grobs 
+library(patchwork)
+mean_SST_1 + SST_2 +SST_Daily_3 +SST_STDEV_DailybyWK_4
+(p1 | p2 | p3) /
+      p4
+ts_Figure | sd.y_Figure | Temp_Figure|  DailyTempRanges |  SSTA_Figure|  TSA_Figure 
+
+ts_Figure + sd.y_Figure + Temp_Figure + DailyTempRanges +  SSTA_Figure + TSA_Figure + plot_layout(widths = c(3,3))
+
+ts_Figure + sd.y_Figure + Temp_Figure + DailyTempRanges +  SSTA_Figure + TSA_Figure + plot_layout(widths = c(3,3))
+
+((p2 / p3 + plot_layout(guides = 'keep')) | p1) + plot_layout(guides = 'collect')
+
+
+
+#Figure after Reviewers:
+ExpDesign_TempMetrics_v3<-ts_Figure + sd.y_Figure.postreview + Temp_Figure + DailyTempRanges_postReview + SSTA_Freq_STDEV_GBR_csv_Allreefs_nostats  + TSA_DHW_GBR_csv_Allreefs_nostats + plot_layout(widths = c(3,3))
+
+```
+
+#Relative Importance
+```{Relative Importance, echo=FALSE}
+#Figure 3 plots A and B 
+##Figure Relative importance
+RelImp<-read.csv("RelativeImportance_summaryAGF18.csv")
+
+variablesRel.Imp<-RelImp %>%dplyr::filter(Source %in% c("eReefs", "CORTAID"))
+
+RelImportance<-variablesRel.Imp %>%
+  arrange(Rel.Importance.GBM.NatComms) %>%
+  mutate(cross = factor(cross, levels=c("pure", "hybrid"))) %>%
+  arrange(Rel.Importance.GBM.NatComms) %>%
+  mutate(LifeStage = factor(LifeStage, levels=c("Larva", "Juvenile"))) %>%
+  ggplot(aes(x = Factor, y = Rel.Importance.GBM.NatComms, fill=Zoox, color=Zoox, shape = cross))+facet_grid(LifeStage~.)+
+geom_point(size=3, position=position_jitterdodge(dodge.width=0.65, jitter.height=0,jitter.width=0.25),alpha=0.7) + theme_bw()+
+  scale_colour_manual(values=c("Apo"="black", "C1"="#55C1E2","D1"="#BB8996", "SED"="#0061A1", "SS"="#352436"))
+  
+R2<-RelImp %>% filter(Source == "R2")
+
+Rsquare<-R2 %>%
+  arrange(Rel.Importance.GBM.NatComms) %>%
+  mutate(cross = factor(cross, levels=c("pure", "hybrid"))) %>%
+  ggplot(aes(x = Zoox, y = Rel.Importance.GBM.NatComms, fill=LifeStage, shape = cross, color=LifeStage))+geom_linerange(aes(ymin=Rel.Importance.GBM.NatComms-SE, ymax=Rel.Importance.GBM.NatComms+SE), width=0.2, position=position_jitterdodge(dodge.width=0.65, jitter.height=0,jitter.width=0.25))+#facet_grid(.~LifeStage)+
+  geom_point(size=3, position=position_jitterdodge(dodge.width=0.65, , jitter.height=0,jitter.width=0.25),alpha=0.7)+ theme_bw()+scale_colour_manual(values=c("Larva"="#55C1E2","Juvenile"="#BB8996"))
+
+
+library(patchwork)
+Rsquare + RelImportance  +  plot_layout(widths = c(1,2))
+
+##D- G outputs from plotmo, and polynomial models from Prediction_AGF18_githubtidy_NatCommschecks_v2.R
+```
+
+
+#Find the Reefs----
+```{Find the reefs, echo=FALSE}
+library(mapping)
+gbr.sp<- readShapeSpatial("Great_Barrier_Reef_Features.shp",
+                          proj4string = CRS('+proj=longlat +ellps=WGS84'),repair=TRUE,force_ring=T,verbose=TRUE)
+
+
+##(1) TSA for larvae purebred
+min(TSA_DHW$TSA_DHWStandardDeviation)
+TSA_larv.pure<-TSA_DHW %>% filter(TSA_DHWStandardDeviation %in% (1.08)) #1.081 solved from third order poly
+TSA_larv.pure_GBR<-TSA_larv.pure %>%filter(lon > 141.5) %>% filter(lon < 153) %>% filter(lat < -10.6) %>% filter(lat > -24.1)
+
+
+#(2) DRT larva hybrids
+#hOuRLY eReef download
+Hourly_AllsiteseReefs_1of2<-read.csv("2006.8591169-collected.csv")
+Hourly_AllsiteseReefs_2of2<-read.csv("2006.db53de4-collected.csv")
+
+#Allsites
+AllsiteseReefs_DRT<-rbind(Hourly_AllsiteseReefs_1of2, Hourly_AllsiteseReefs_2of2)
+AllsiteseReefs_DRT$mean<-as.numeric(AllsiteseReefs_DRT$mean)
+
+###
+DRT_Reefs2019.DATES_AllREEFS<-AllsiteseReefs_DRT%>% separate(Aggregated.Date.Time, c("Date", "Time"),"T" )%>% separate(Date, c("Year", "Month", "Day"),"-")
+
+DTR.max.AllREEFS<- aggregate(DRT_Reefs2019.DATES_AllREEFS$mean, by = list(DRT_Reefs2019.DATES_AllREEFS$Site.Name, DRT_Reefs2019.DATES_AllREEFS$Year, DRT_Reefs2019.DATES_AllREEFS$Month, DRT_Reefs2019.DATES_AllREEFS$Day), max)
+
+DTR.min.AllREEFS<- aggregate(DRT_Reefs2019.DATES_AllREEFS$mean, by = list(DRT_Reefs2019.DATES_AllREEFS$Site.Name, DRT_Reefs2019.DATES_AllREEFS$Year, DRT_Reefs2019.DATES_AllREEFS$Month, DRT_Reefs2019.DATES_AllREEFS$Day), min)
+
+DRT.mean.min.max.ALLREEFS<-dplyr::left_join(DTR.max.AllREEFS, DTR.min.AllREEFS, by= c("Group.1", "Group.2", "Group.3", "Group.4"))
+
+DRT.mean.min.max_DRT.ALLREEFS<- dplyr::mutate(DRT.mean.min.max.ALLREEFS, DRT = x.x - x.y)
+
+Larv.hyb.DRT_AllsiteseReefs<-DRT.mean.min.max_DRT.ALLREEFS %>% filter(DRT > 0.5150000) %>% filter(DRT < 0.5152158)
+
+Larv.hyb.DRT_AllsiteseReefs.rename<-dplyr::rename(Larv.hyb.DRT_AllsiteseReefs, Site.Name = Group.1)
+
+Larv.hyb.DRT_AllsiteseReefs.lat.long<-dplyr::left_join(Larv.hyb.DRT_AllsiteseReefs.rename, DRT_Reefs2019.DATES_AllREEFS, by= ("Site.Name"))
+
+unique_Larv.hyb.DRT_AllsiteseReefs.lat.long<-distinct(Larv.hyb.DRT_AllsiteseReefs.lat.long, Site.Name, .keep_all = TRUE)
+unique_Larv.hyb.DRT_AllsiteseReefs.lat.long_filt<-unique_Larv.hyb.DRT_AllsiteseReefs.lat.long %>% filter(DRT < 0.515101703217489)
+
+#(3) ts_ (aka SST_av.pre) for juvenile purebreds D1a
+AllsiteseReefs_1of2<-read.csv("2005.5e5e11c-collected.csv")
+AllsiteseReefs_2of2<-read.csv("2005.380fbd9-collected.csv")
+AllsiteseReefs_ts_<-rbind(AllsiteseReefs_1of2, AllsiteseReefs_2of2)
+AllsiteseReefs_ts_$mean<-as.numeric(AllsiteseReefs_ts_$mean)
+AllsiteseReefs_ts_.summary<-summarySE(AllsiteseReefs_ts_, measurevar="mean", groupvars=c("Site.Name", "Latitude", "Longitude"), na.rm=TRUE)
+Juv.D1.pure_AllsiteseReefs_ts_.summary<-AllsiteseReefs_ts_.summary %>% filter(mean > 26.68806) %>% filter(mean < 26.70280) 
+
+
+#(4) TSA for juvenile hybrid with D1a
+TSA_Juv.D1.hyb<-TSA_DHW %>% filter(TSA_DHWStandardDeviation %in% (1.32))
+TSA_Juv.D1.hyb_GBR<-TSA_Juv.D1.hyb %>%filter(lon > 141.5) %>% filter(lon < 153) %>% filter(lat < -10.6) %>% filter(lat > -24.1)
+
+
+#Final map
+ggplot()+geom_polygon(data = gbr.sp,aes(x = long,y = lat,group = group, fill=grey), fill= NA, color="black")+#"#d3d3d3"  #could do fill ="NA"
+  geom_point(TSA_Juv.D1.hyb_GBR, mapping= aes(x=lon, y=lat), color="#55C1E2", size=2)+
+  geom_point(TSA_larv.pure_GBR, mapping= aes(x=lon, y=lat), color="#F6CCA0", size=2)+
+  geom_point(unique_Larv.hyb.DRT_AllsiteseReefs.lat.long_filt, mapping= aes(x=Longitude, y=Latitude), color="#BB8996", size=2)+
+  geom_point(Juv.D1.pure_AllsiteseReefs_ts_.summary, mapping= aes(x=Longitude, y=Latitude), color="#616594", size=2)+
+  theme(panel.background = element_rect(size = 3, colour = "black", fill = "white"),axis.ticks = element_line(size = 2),panel.grid.major = element_line(colour = "gray80",linetype = "dotted"),panel.grid.minor = element_line(colour = "gray90",linetype = "dashed"))+coord_fixed(1.3)+
+  labs(x="long", y="lat", color="Legend")+ggsave("my_large_plot.png", scale = 3, dpi = 400)
+
+```
+
+
