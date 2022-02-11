@@ -9,7 +9,7 @@ All required packages and the versions (especially for BRT section in Script 3) 
 
 ----
 
-#Script 1 "eReefs extract_Githubtidy.Rmd"
+#Script 1 "eReefs extract_Githubtidy_Final.Rmd"
 
 Files:
 #Temperature data--
