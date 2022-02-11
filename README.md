@@ -69,3 +69,8 @@ arif_ITS2_DB_mod.fasta
 Juveniles_AGF18_Phyloseq_Metadata.csv
 ITS2_AGF18_Ariftax_Edit.csv
 
+Source files:
+save30.11.21.Rdata (zip file)
+save19.8.21restartNatComs.Rdata (zip file)
+retesting_BRTs_April2021.RData (zip file)
+
