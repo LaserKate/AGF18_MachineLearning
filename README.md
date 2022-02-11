@@ -49,7 +49,7 @@ Supp figures
 
 ----
 
-#Script 3 "Prediction_AGF18_githubtidy_NatCommschecks_v2.R"
+#Script 3 "Prediction_AGF18_githubtidy_NatCommschecks_v2_Final.R"
 
 Files:
 larv6.csv #Download the larval data with satellite data attached appended----
