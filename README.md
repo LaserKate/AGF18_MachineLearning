@@ -32,7 +32,7 @@ RelativeImportance_summaryAGF18.csv
 
 ----
 
-#Script 2 "AGF2018_larval_heatstress_Githubtidy.R"
+#Script 2 "AGF2018_larval_heatstress_Githubtidy_Final.R"
 
 Files:
 AGF18.Sites_Github.csv
